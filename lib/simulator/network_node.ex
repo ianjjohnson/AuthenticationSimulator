@@ -37,6 +37,21 @@ defmodule Simulator.NetworkNode do
     {:reply, state, state}
   end
 
+  def handle_cast {:newMessage, {key, n}, from}, state do
+
+    Logger.write("Setup received at #{inspect self} from #{inspect from} with params #{inspect {key,n}}\n")
+
+    state =
+    state
+    |> Enum.map(&(set_params(&1,{key, n, from})))
+
+    state
+    |> Enum.map(&(Simulator.NetworkNode.add_to_inbox &1.pid, :gotSetup, self))
+
+    {:noreply,state}
+
+  end
+
   def handle_cast {:newMessage, content, from}, state do
     myPid = self
     spawn(fn -> respond_to(from, myPid, state) end)
@@ -45,8 +60,12 @@ defmodule Simulator.NetworkNode do
   end
 
   def handle_cast {:startup}, state do
+    state =
     state
-    |> Enum.map(&(Simulator.NetworkNode.add_to_inbox &1.pid, :hello, self))
+    |> Enum.map( &( %{&1 | n: :rand.uniform(255), key: :rand.uniform(255)} ) )
+
+    state
+    |> Enum.map(&(Simulator.NetworkNode.add_to_inbox &1.pid, {&1.key, &1.n}, self))
 
     {:noreply, state}
   end
@@ -62,6 +81,14 @@ defmodule Simulator.NetworkNode do
     [conn] = Enum.filter state, &(&1.pid == recipient)
     :timer.sleep(1000)
     Simulator.NetworkNode.add_to_inbox(recipient, :tmp, sender)
+  end
+
+  defp set_params conn, {key, n , from} do
+    if conn.pid == from do
+      %{conn | n: n, key: key}
+    else
+      conn
+    end
   end
 
 end
