@@ -9,19 +9,19 @@ defmodule Simulator.StreamCipher do
     GenServer.start __MODULE__, [], name: @me
   end
 
-  def update(map, received) do
-    GenServer.call @me, {:update, map, received}
+  def update(map) do
+    GenServer.call @me, {:update, map}
   end
 
 
   #Implementation
   def init(_args), do: {:ok, %{}}
 
-  def handle_call {:update, map, received}, _from, state do
+  def handle_call {:update, map}, _from, state do
     delay = encrypt(map.n, map.key)
     nextDelay = encrypt(delay, map.key)
     { :reply,
-      {delay, %{map | n: nextDelay, expected: delay+nextDelay, danger: received+delay+nextDelay/2}},
+      {delay, %{map | n: nextDelay, expected: map.expected+delay+nextDelay, danger: map.expected+delay+nextDelay/2}},
       state
     }
   end

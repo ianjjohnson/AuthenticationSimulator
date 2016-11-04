@@ -60,7 +60,7 @@ defmodule Simulator.NetworkNode do
   def handle_cast {:newMessage, content, from}, state do
     received = Simulator.Clock.current_time
     myPid = self
-    spawn(fn -> respond_to(from, myPid, state, received) end)
+    spawn(fn -> respond_to(from, myPid, state) end)
     [conn] = Enum.filter state, &(&1.pid == from)
     Logger.log content, myPid, from, received, conn
     {:noreply, state}
@@ -90,10 +90,11 @@ defmodule Simulator.NetworkNode do
     {:noreply, [conn | state]}
   end
 
-  defp respond_to recipient, sender, state, received do
+  defp respond_to recipient, sender, state do
     [conn] = Enum.filter state, &(&1.pid == recipient)
-    {delay, conn} = Simulator.StreamCipher.update(conn, received)
-    :timer.sleep(delay)
+    expected = conn.expected
+    {delay, conn} = Simulator.StreamCipher.update(conn)
+    :timer.sleep(delay - (Simulator.Clock.current_time - expected))
     Simulator.NetworkNode.add_to_inbox(recipient, :tmp, sender)
     Simulator.NetworkNode.update_connection(sender, conn)
   end
