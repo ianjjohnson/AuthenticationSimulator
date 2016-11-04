@@ -12,6 +12,9 @@ defmodule Simulator do
       # worker(Simulator.Worker, [arg1, arg2, arg3]),
       worker(Simulator.StreamCipher, []),
       worker(Simulator.MeetupServer, []),
+
+
+      supervisor(Simulator.NodeSupervisor, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

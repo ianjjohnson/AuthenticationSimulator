@@ -16,7 +16,7 @@ defmodule Simulator.MeetupServer do
   end
 
 
-#Implementation
+  #Implementation
 
   def init(state), do: {:ok, state}
 
