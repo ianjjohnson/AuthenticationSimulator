@@ -2,6 +2,8 @@ defmodule Simulator.NetworkNode do
 
   use GenServer
 
+  alias Simulator.Logger
+
 
   def start_link() do
     GenServer.start __MODULE__, []
@@ -31,23 +33,18 @@ defmodule Simulator.NetworkNode do
     {:ok, Simulator.MeetupServer.get_users}
   end
 
-  def handle_cast {:newMessage, content, from}, state do
-    myPid = self
-    spawn(fn -> respond_to(from, myPid, state) end)
-    IO.puts "Message \"#{content}\" received at:"
-    IO.inspect myPid
-    IO.puts "From: "
-    IO.inspect from
-    {:noreply, state}
-  end
-
   def handle_call {:state}, _from, state do
     {:reply, state, state}
   end
 
+  def handle_cast {:newMessage, content, from}, state do
+    myPid = self
+    spawn(fn -> respond_to(from, myPid, state) end)
+    Logger.write "Message \"#{content}\" received at: #{inspect myPid}, from: #{inspect from}\n"
+    {:noreply, state}
+  end
+
   def handle_cast {:startup}, state do
-    # GenServer.call targetPid, {:message, :ping}
-    # {:noreply, [ %Simulator.Connection{pid: targetPid} | state]}
     state
     |> Enum.map(&(Simulator.NetworkNode.add_to_inbox &1.pid, :hello, self))
 

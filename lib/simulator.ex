@@ -13,7 +13,8 @@ defmodule Simulator do
       worker(Simulator.StreamCipher, []),
       worker(Simulator.MeetupServer, []),
 
-
+      worker(Simulator.Logger, ["log.txt"]),
+      
       supervisor(Simulator.NodeSupervisor, [])
     ]
 
