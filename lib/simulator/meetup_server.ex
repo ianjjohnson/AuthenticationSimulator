@@ -16,7 +16,7 @@ defmodule Simulator.MeetupServer do
   end
 
   def setup() do
-    GenServer.cast @me, {:setup}
+    GenServer.call @me, {:setup}
   end
 
 
@@ -34,10 +34,11 @@ defmodule Simulator.MeetupServer do
     {:reply, Enum.reject(state, &(&1 == Kernel.elem(from, 0))), state}
   end
 
-  def handle_cast {:setup}, state do
+  def handle_call {:setup}, from, state do
     state
     |> Enum.map(&(Simulator.NetworkNode.setup(&1)))
-    {:noreply, state }
+
+    {:reply, state, state}
   end
 
 end
