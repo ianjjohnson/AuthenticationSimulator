@@ -12,9 +12,10 @@ defmodule Simulator do
       # worker(Simulator.Worker, [arg1, arg2, arg3]),
       worker(Simulator.StreamCipher, []),
       worker(Simulator.MeetupServer, []),
+      worker(Simulator.Clock       , []),
 
-      worker(Simulator.Logger, ["log.txt"]),
-      
+      worker(Simulator.Logger, ["log.txt", "time.txt"]),
+
       supervisor(Simulator.NodeSupervisor, [])
     ]
 
