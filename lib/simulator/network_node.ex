@@ -69,7 +69,7 @@ defmodule Simulator.NetworkNode do
   def handle_cast {:startup}, state do
     state =
     state
-    |> Enum.map( &( %{&1 | n: :rand.uniform(@keyrange), key: :rand.uniform(@keyrange)}))
+    |> Enum.map( &( %{&1 | n: :rand.uniform(@keyrange), key: :rand.uniform(@keyrange), expected: Simulator.Clock.current_time}))
 
 
     state
@@ -101,7 +101,8 @@ defmodule Simulator.NetworkNode do
   defp set_params conn, {key, n, from} do
     if conn.pid == from do
       delay = Simulator.StreamCipher.encrypt(n, key)
-      %{conn | n: delay, key: key, expected: delay, danger: delay/2}
+      time = Simulator.Clock.current_time
+      %{conn | n: delay, key: key, expected: time+delay, danger: time+delay/2}
     else
       conn
     end

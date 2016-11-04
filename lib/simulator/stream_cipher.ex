@@ -21,13 +21,13 @@ defmodule Simulator.StreamCipher do
     delay = encrypt(map.n, map.key)
     nextDelay = encrypt(delay, map.key)
     { :reply,
-      {delay, %{map | n: nextDelay, expected: received+delay+nextDelay, danger: received+delay+nextDelay/2}},
+      {delay, %{map | n: nextDelay, expected: delay+nextDelay, danger: received+delay+nextDelay/2}},
       state
     }
   end
 
   def encrypt keystream, key do
-    rem(key * keystream, @maxdelay)
+    rem(key * keystream + 1, @maxdelay)
   end
 
 
