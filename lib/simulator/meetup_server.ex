@@ -20,11 +20,10 @@ defmodule Simulator.MeetupServer do
 
   def init(state), do: {:ok, state}
 
-
-  #FIX all this crap (TODO and BUG)
-  #This needs to not have duplicates and not return self to requester
   def handle_call {:register}, from, state do
-    {:reply, state, [Kernel.elem(from, 0) | state]}
+    {:reply,
+      state,
+      [Kernel.elem(from, 0) | state]}
   end
 
   def handle_call {:get_users}, from, state do
