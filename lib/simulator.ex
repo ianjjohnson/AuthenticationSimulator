@@ -10,6 +10,13 @@ defmodule Simulator do
     children = [
       # Starts a worker by calling: Simulator.Worker.start_link(arg1, arg2, arg3)
       # worker(Simulator.Worker, [arg1, arg2, arg3]),
+      worker(Simulator.StreamCipher, []),
+      worker(Simulator.MeetupServer, []),
+      worker(Simulator.Clock       , []),
+
+      worker(Simulator.Logger, ["log.txt", "time.txt"]),
+
+      supervisor(Simulator.NodeSupervisor, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
