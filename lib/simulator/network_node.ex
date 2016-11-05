@@ -42,13 +42,13 @@ defmodule Simulator.NetworkNode do
     {:reply, state, state}
   end
 
-  def handle_cast {:newMessage, {key, n}, from}, state do
+  def handle_cast {:newMessage, {key, n, time}, from}, state do
 
     Logger.write("Setup received at #{inspect self} from #{inspect from} with params #{inspect {key,n}}\n")
 
     state =
     state
-    |> Enum.map(&(set_params(&1,{key, n, from})))
+    |> Enum.map(&(set_params(&1,{key, n, time, from})))
 
     state
     |> Enum.map(&(Simulator.NetworkNode.add_to_inbox &1.pid, :gotSetup, self))
@@ -67,13 +67,15 @@ defmodule Simulator.NetworkNode do
   end
 
   def handle_cast {:startup}, state do
+
+    time = Simulator.Clock.current_time
     state =
     state
-    |> Enum.map( &( %{&1 | n: :rand.uniform(@keyrange), key: :rand.uniform(@keyrange), expected: Simulator.Clock.current_time}))
+    |> Enum.map( &( %{&1 | n: :rand.uniform(@keyrange), key: :rand.uniform(@keyrange), expected: time}))
 
 
     state
-    |> Enum.map(&(Simulator.NetworkNode.add_to_inbox &1.pid, {&1.key, &1.n}, self))
+    |> Enum.map(&(Simulator.NetworkNode.add_to_inbox &1.pid, {&1.key, &1.n, time}, self))
 
     {:noreply, state}
   end
@@ -99,10 +101,9 @@ defmodule Simulator.NetworkNode do
     Simulator.NetworkNode.update_connection(sender, conn)
   end
 
-  defp set_params conn, {key, n, from} do
+  defp set_params conn, {key, n, time, from} do
     if conn.pid == from do
       delay = Simulator.StreamCipher.encrypt(n, key)
-      time = Simulator.Clock.current_time
       %{conn | n: delay, key: key, expected: time+delay, danger: time+delay/2}
     else
       conn

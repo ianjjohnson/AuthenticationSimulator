@@ -3,7 +3,8 @@ defmodule Simulator.StreamCipher do
   use GenServer
   @me __MODULE__
 
-  @maxdelay 1024
+  @delayrange 1024
+  @mindelay   50
 
   def start_link() do
     GenServer.start __MODULE__, [], name: @me
@@ -27,7 +28,7 @@ defmodule Simulator.StreamCipher do
   end
 
   def encrypt keystream, key do
-    rem(key * keystream + 1, @maxdelay)
+    rem(key * keystream, @delayrange) + @mindelay
   end
 
 

@@ -8,7 +8,7 @@ defmodule Simulator.NodeSupervisor do
   def init(_arg) do
 
     children = [
-        #The actual game server
+        #The clients on the network
         worker(Simulator.NetworkNode, [], [id: make_ref]),
         worker(Simulator.NetworkNode, [], [id: make_ref])
     ]
