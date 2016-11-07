@@ -100,7 +100,7 @@ defmodule Simulator.NetworkNode do
     expected = conn.expected
     {delay, conn} = Simulator.StreamCipher.update(conn)
     :timer.sleep(delay - (Simulator.Clock.current_time - expected))
-    Simulator.NetworkNode.add_to_inbox(recipient, :tmp, sender)
+    Simulator.NetworkNode.add_to_inbox(recipient, :safe, sender)
     Simulator.NetworkNode.update_connection(sender, conn)
   end
 

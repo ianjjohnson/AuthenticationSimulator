@@ -4,11 +4,11 @@ defmodule Simulator.Authenticator do
   @me __MODULE__
 
   def start_link windowsize do
-    GenServer.start __MODULE__, windowsize, name: @me
+    GenServer.start __MODULE__, windowsize
   end
 
-  def authenticate(connection, received) do
-    GenServer.call @me, {:auth, connection, received}
+  def authenticate(pid, connection, received) do
+    GenServer.call pid, {:auth, connection, received}
   end
 
   #Implementation
