@@ -11,8 +11,8 @@ defmodule Simulator.Logger do
     GenServer.cast @me, {:write, binary}
   end
 
-  def log(content, myPid, from, received, conn) do
-    GenServer.cast @me, {:log, content, myPid, from, received, conn}
+  def log(content, myPid, from, received, conn, auth) do
+    GenServer.cast @me, {:log, content, myPid, from, received, conn, auth}
   end
 
   #Implementation
@@ -23,8 +23,9 @@ defmodule Simulator.Logger do
     {:ok, %{log: log, time: time}}
   end
 
-  def handle_cast {:log, content, myPid, from, received, conn}, files do
+  def handle_cast {:log, content, myPid, from, received, conn, auth}, files do
     IO.binwrite files.log , "Message \"#{content}\" \n"
+    IO.binwrite files.log , "Messages was #{atom_to_authcode(auth)}"
     IO.binwrite files.log , "\tReceived at PID: #{inspect myPid}, from PID: #{inspect from}\n"
     IO.binwrite files.log , "\tReceived at time: #{received}, expected: #{conn.expected}\n"
     IO.binwrite files.log , "\tConnection: #{inspect conn}\n"
@@ -38,5 +39,8 @@ defmodule Simulator.Logger do
     IO.binwrite files.log, binary
     {:noreply, files}
   end
+
+  defp atom_to_authcode(:true),  do: "Authenticated"
+  defp atom_to_authcode(:false), do: "Not Authenticated"
 
 end
