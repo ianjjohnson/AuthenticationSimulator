@@ -67,7 +67,7 @@ defmodule Simulator.Logger do
   end
 
   defp write_authenticator(authenticator) do
-    {:ok, file} = File.open "data/auth#{authenticator.window}.dat", [:write]
+    {:ok, file} = File.open "data/windows/auth#{authenticator.window}.dat", [:write]
     IO.binwrite file, "Window: #{authenticator.window}    \n"
                    <> "\t True  Pos: #{authenticator.truePos} \n"
                    <> "\t False Pos: #{authenticator.falsePos} \n"
