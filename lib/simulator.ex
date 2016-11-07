@@ -23,5 +23,12 @@ defmodule Simulator do
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Simulator.Supervisor]
     Supervisor.start_link(children, opts)
+
   end
+
+  def run do
+    [node1 | _tail] = Simulator.MeetupServer.setup
+    Simulator.NetworkNode.startup node1
+  end
+
 end
