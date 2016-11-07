@@ -3,8 +3,8 @@ defmodule Simulator.Authenticator do
   use GenServer
   @me __MODULE__
 
-  def start_link window do
-    GenServer.start __MODULE__, window, name: @me
+  def start_link windowsize do
+    GenServer.start __MODULE__, windowsize, name: @me
   end
 
   def authenticate(connection, received) do
@@ -12,8 +12,8 @@ defmodule Simulator.Authenticator do
   end
 
   #Implementation
-  def init(window) do
-    {:ok, %{windowsize: window }}
+  def init(windowsize) do
+    {:ok, %{windowsize: windowsize}}
   end
 
   def handle_call {:auth, connection, received}, _from, state do

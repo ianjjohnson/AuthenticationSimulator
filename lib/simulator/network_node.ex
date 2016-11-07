@@ -61,11 +61,10 @@ defmodule Simulator.NetworkNode do
     received = Simulator.Clock.current_time
     myPid = self
 
-    [conn] = Enum.filter state, &(&1.pid == from)
-    auth = Simulator.Authenticator.authenticate(conn, received)
-    Logger.log content, myPid, from, received, conn, auth
-
     spawn(fn -> respond_to(from, myPid, state) end)
+
+    [conn] = Enum.filter state, &(&1.pid == from)
+    Logger.log content, myPid, from, received, conn
 
     {:noreply, state}
   end
