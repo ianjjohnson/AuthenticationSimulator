@@ -30,6 +30,10 @@ defmodule Simulator.NetworkNode do
     GenServer.cast pid, {:update, conn}
   end
 
+  def check_if_vulnerable(pid, attacker) do
+    GenServer.cast pid, {:vulnuerable, attacker}
+  end
+
 
 
 
@@ -40,6 +44,13 @@ defmodule Simulator.NetworkNode do
 
   def handle_call {:state}, _from, state do
     {:reply, state, state}
+  end
+
+  def handle_cast {:vulnuerable, attacker}, state do
+    received = Simulator.Clock.current_time
+    [conn] = Enum.filter state, &(&1.pid == attacker)
+    Logger.log_attack received, conn.expected
+    {:noreply, state}
   end
 
   def handle_cast {:newMessage, {key, n, time}, from}, state do

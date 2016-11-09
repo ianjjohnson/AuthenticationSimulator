@@ -29,6 +29,7 @@ defmodule Simulator do
   def run do
     [node1 | _tail] = Simulator.MeetupServer.setup
     Simulator.NetworkNode.startup node1
+    Simulator.Attacker.start_attack
   end
 
 end

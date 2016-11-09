@@ -7,8 +7,8 @@ defmodule Simulator.Authenticator do
     GenServer.start __MODULE__, windowsize
   end
 
-  def authenticate(pid, connection, received) do
-    GenServer.call pid, {:auth, connection, received}
+  def authenticate(pid, expected, received) do
+    GenServer.call pid, {:auth, expected, received}
   end
 
   #Implementation
@@ -16,8 +16,8 @@ defmodule Simulator.Authenticator do
     {:ok, %{windowsize: windowsize}}
   end
 
-  def handle_call {:auth, connection, received}, _from, state do
-    {:reply, (received-connection.expected < state.windowsize) , state}
+  def handle_call {:auth, expected, received}, _from, state do
+    {:reply, (received-expected < state.windowsize) , state}
   end
 
 end

@@ -8,7 +8,7 @@ defmodule Simulator.Logger do
   @me __MODULE__
 
   def start_link(logFile, timeFile, windowSizes) do
-    GenServer.start __MODULE__, {logFile, timeFile,windowSizes}, name: @me
+    GenServer.start __MODULE__, {logFile, timeFile, windowSizes}, name: @me
   end
 
   def write(binary) do
@@ -19,6 +19,10 @@ defmodule Simulator.Logger do
     GenServer.cast @me, {:log, content, myPid, from, received, conn}
   end
 
+  def log_attack(received, expected) do
+    GenServer.cast @me, {:attack, received, expected}
+  end
+
   def write_authenticators() do
     GenServer.cast @me, {:write}
   end
@@ -26,8 +30,8 @@ defmodule Simulator.Logger do
   #Implementation
 
   def init({logFile, timeFile, windowSizes}) do
-    {:ok, log } = File.open logFile,  [:write]
-    {:ok, time} = File.open timeFile, [:write]
+    {:ok, log }   = File.open logFile,    [:write]
+    {:ok, time}   = File.open timeFile,   [:write]
     {:ok,
       %{
         log: log,
@@ -48,11 +52,27 @@ defmodule Simulator.Logger do
 
     state = %{state | authenticators:
       state.authenticators
-      |> Enum.map(&(update_authenticator(&1, content, received, conn)))
+      |> Enum.map(&(update_authenticator(&1, content, received, conn.expected)))
     }
 
     {:noreply, state}
   end
+
+  def handle_cast {:attack, received, expected}, state do
+
+    #TODO:
+    #print_to_log_file(state.log, content, myPid, from, received, conn)
+    #print_to_time_file(state.time, received, conn.expected)
+
+    state = %{state | authenticators:
+      state.authenticators
+      |> Enum.map(&(update_authenticator(&1, :unsafe, received, expected)))
+    }
+    #Update the authenticators!!
+
+    {:noreply, state}
+  end
+
 
   def handle_cast {:write, binary}, state do
     IO.binwrite state.log, binary
@@ -75,11 +95,11 @@ defmodule Simulator.Logger do
                    <> "\t False Neg: #{authenticator.falseNeg} \n"
   end
 
-  defp update_authenticator(map, content, received, conn) do
+  defp update_authenticator(map, content, received, expected) do
 
     case {content,
           Auth.authenticate(map.pid,
-                            conn,
+                            expected,
                             received)
          } do
 
