@@ -3,7 +3,7 @@ defmodule Simulator.Attacker do
   use GenServer
   @me __MODULE__
 
-  def start_link args \\ [100] do
+  def start_link args \\ [1024] do
     GenServer.start __MODULE__, args, name: @me
   end
 

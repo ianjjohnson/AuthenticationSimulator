@@ -63,6 +63,7 @@ defmodule Simulator.Logger do
     #TODO:
     #print_to_log_file(state.log, content, myPid, from, received, conn)
     #print_to_time_file(state.time, received, conn.expected)
+    IO.binwrite state.log, "Got attack at time #{received}"
 
     state = %{state | authenticators:
       state.authenticators

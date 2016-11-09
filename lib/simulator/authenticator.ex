@@ -17,7 +17,7 @@ defmodule Simulator.Authenticator do
   end
 
   def handle_call {:auth, expected, received}, _from, state do
-    {:reply, (received-expected < state.windowsize) , state}
+    {:reply, (received-expected < state.windowsize  && received > expected) , state}
   end
 
 end
