@@ -32,12 +32,11 @@ defmodule Simulator.Logger do
   def init({logFile, timeFile, authFile, windowSizes}) do
     {:ok, log }   = File.open logFile,    [:write]
     {:ok, time}   = File.open timeFile,   [:write]
-    {:ok, auth}   = File.open authFile,   [:write]
     {:ok,
       %{
         log: log,
         time: time,
-        auth: auth,
+        auth: authFile,
         authenticators: windowSizes
                         |> Enum.map(&(%Simulator.Logger{
                                         pid: Kernel.elem(Auth.start_link(&1), 1),
@@ -83,8 +82,11 @@ defmodule Simulator.Logger do
   end
 
   def handle_cast {:write}, state do
+
+    {:ok, file} = File.open state.auth, [:write]
+
     state.authenticators
-    |> Enum.map(&(write_authenticator(&1, state.auth)))
+    |> Enum.map(&(write_authenticator(&1, file)))
 
     {:noreply, state}
   end
