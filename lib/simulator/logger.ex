@@ -7,8 +7,8 @@ defmodule Simulator.Logger do
   use GenServer
   @me __MODULE__
 
-  def start_link(logFile, timeFile, windowSizes) do
-    GenServer.start __MODULE__, {logFile, timeFile, windowSizes}, name: @me
+  def start_link(logFile, timeFile, authFile, windowSizes) do
+    GenServer.start __MODULE__, {logFile, timeFile, authFile, windowSizes}, name: @me
   end
 
   def write(binary) do
@@ -29,13 +29,15 @@ defmodule Simulator.Logger do
 
   #Implementation
 
-  def init({logFile, timeFile, windowSizes}) do
+  def init({logFile, timeFile, authFile, windowSizes}) do
     {:ok, log }   = File.open logFile,    [:write]
     {:ok, time}   = File.open timeFile,   [:write]
+    {:ok, auth}   = File.open authFile,   [:write]
     {:ok,
       %{
         log: log,
         time: time,
+        auth: auth,
         authenticators: windowSizes
                         |> Enum.map(&(%Simulator.Logger{
                                         pid: Kernel.elem(Auth.start_link(&1), 1),
@@ -63,7 +65,7 @@ defmodule Simulator.Logger do
     #TODO:
     #print_to_log_file(state.log, content, myPid, from, received, conn)
     #print_to_time_file(state.time, received, conn.expected)
-    IO.binwrite state.log, "Got attack at time #{received}"
+    IO.binwrite state.log, "Got attack at time #{received}\n"
 
     state = %{state | authenticators:
       state.authenticators
@@ -82,13 +84,12 @@ defmodule Simulator.Logger do
 
   def handle_cast {:write}, state do
     state.authenticators
-    |> Enum.map(&(write_authenticator(&1)))
+    |> Enum.map(&(write_authenticator(&1, state.auth)))
 
     {:noreply, state}
   end
 
-  defp write_authenticator(authenticator) do
-    {:ok, file} = File.open "data/windows/auth#{authenticator.window}.dat", [:write]
+  defp write_authenticator(authenticator, file) do
     IO.binwrite file, "Window: #{authenticator.window}    \n"
                    <> "\t True  Pos: #{authenticator.truePos} \n"
                    <> "\t False Pos: #{authenticator.falsePos} \n"

@@ -14,7 +14,7 @@ defmodule Simulator do
       worker(Simulator.MeetupServer , [] ),
       worker(Simulator.Clock        , [] ),
 
-      worker(Simulator.Logger, ["data/log.dat", "data/time.dat", 1..10]),
+      worker(Simulator.Logger, ["data/log.dat", "data/time.dat", "data/auth.dat", 1..10]),
 
       supervisor(Simulator.NodeSupervisor, [])
     ]
