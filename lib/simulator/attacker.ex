@@ -25,11 +25,15 @@ defmodule Simulator.Attacker do
 
   defp attack(users, max_wait) do
 
-    #Send an attack message. Important: how does the sim respond?
-    [a,b|_tail] = users
-    Simulator.NetworkNode.check_if_vulnerable(a, b)
-
     :timer.sleep(:rand.uniform(max_wait))
+
+    [a,b|_tail] = users
+
+    case :rand.uniform(2) do
+        1 -> Simulator.NetworkNode.check_if_vulnerable(a, b)
+        2 -> Simulator.NetworkNode.check_if_vulnerable(b, a)
+    end
+
     attack(users, max_wait)
   end
 
