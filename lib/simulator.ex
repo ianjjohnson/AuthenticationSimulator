@@ -10,11 +10,11 @@ defmodule Simulator do
     children = [
       # Starts a worker by calling: Simulator.Worker.start_link(arg1, arg2, arg3)
       # worker(Simulator.Worker, [arg1, arg2, arg3]),
-      worker(Simulator.StreamCipher, []),
-      worker(Simulator.MeetupServer, []),
-      worker(Simulator.Clock       , []),
+      worker(Simulator.StreamCipher , [] ),
+      worker(Simulator.MeetupServer , [] ),
+      worker(Simulator.Clock        , [] ),
 
-      worker(Simulator.Logger, ["log.txt", "time.txt"]),
+      worker(Simulator.Logger, ["data/log.dat", "data/time.dat", "data/auth.dat", 1..10]),
 
       supervisor(Simulator.NodeSupervisor, [])
     ]
@@ -23,5 +23,13 @@ defmodule Simulator do
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Simulator.Supervisor]
     Supervisor.start_link(children, opts)
+
   end
+
+  def run do
+    [node1 | _tail] = Simulator.MeetupServer.setup
+    Simulator.NetworkNode.startup node1
+    Simulator.Attacker.start_attack
+  end
+
 end

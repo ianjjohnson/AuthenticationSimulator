@@ -34,7 +34,7 @@ defmodule Simulator.MeetupServer do
     {:reply, Enum.reject(state, &(&1 == Kernel.elem(from, 0))), state}
   end
 
-  def handle_call {:setup}, from, state do
+  def handle_call {:setup}, _from, state do
     state
     |> Enum.map(&(Simulator.NetworkNode.setup(&1)))
 

@@ -30,6 +30,10 @@ defmodule Simulator.NetworkNode do
     GenServer.cast pid, {:update, conn}
   end
 
+  def check_if_vulnerable(pid, attacker) do
+    GenServer.cast pid, {:vulnuerable, attacker}
+  end
+
 
 
 
@@ -40,6 +44,13 @@ defmodule Simulator.NetworkNode do
 
   def handle_call {:state}, _from, state do
     {:reply, state, state}
+  end
+
+  def handle_cast {:vulnuerable, attacker}, state do
+    received = Simulator.Clock.current_time
+    [conn] = Enum.filter state, &(&1.pid == attacker)
+    Logger.log_attack received, conn.expected
+    {:noreply, state}
   end
 
   def handle_cast {:newMessage, {key, n, time}, from}, state do
@@ -60,9 +71,12 @@ defmodule Simulator.NetworkNode do
   def handle_cast {:newMessage, content, from}, state do
     received = Simulator.Clock.current_time
     myPid = self
+
     spawn(fn -> respond_to(from, myPid, state) end)
+
     [conn] = Enum.filter state, &(&1.pid == from)
     Logger.log content, myPid, from, received, conn
+
     {:noreply, state}
   end
 
@@ -97,7 +111,7 @@ defmodule Simulator.NetworkNode do
     expected = conn.expected
     {delay, conn} = Simulator.StreamCipher.update(conn)
     :timer.sleep(delay - (Simulator.Clock.current_time - expected))
-    Simulator.NetworkNode.add_to_inbox(recipient, :tmp, sender)
+    Simulator.NetworkNode.add_to_inbox(recipient, :safe, sender)
     Simulator.NetworkNode.update_connection(sender, conn)
   end
 
