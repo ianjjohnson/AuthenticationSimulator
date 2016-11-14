@@ -48,6 +48,7 @@ defmodule Simulator.Logger do
   end
 
   def handle_cast {:log, content, myPid, from, received, conn}, state do
+
     print_to_log_file(state.log, content, myPid, from, received, conn)
     print_to_time_file(state.time, received, conn.expected)
 
@@ -61,16 +62,12 @@ defmodule Simulator.Logger do
 
   def handle_cast {:attack, received, expected}, state do
 
-    #TODO:
-    #print_to_log_file(state.log, content, myPid, from, received, conn)
-    #print_to_time_file(state.time, received, conn.expected)
     IO.binwrite state.log, "Got attack at time #{received}\n"
 
     state = %{state | authenticators:
-      state.authenticators
-      |> Enum.map(&(update_authenticator(&1, :unsafe, received, expected)))
+                      state.authenticators
+                      |> Enum.map(&(update_authenticator(&1, :unsafe, received, expected)))
     }
-    #Update the authenticators!!
 
     {:noreply, state}
   end
@@ -82,15 +79,12 @@ defmodule Simulator.Logger do
   end
 
   def handle_cast {:write}, state do
-
     {:ok, file} = File.open state.auth, [:write]
-
-    state.authenticators
-    |> Enum.map(&(write_authenticator(&1, file)))
-
+    state.authenticators |> Enum.map(&(write_authenticator(&1, file)))
     {:noreply, state}
   end
 
+  #Write the contents of an authenticator to the auth log file
   defp write_authenticator(authenticator, file) do
     IO.binwrite file, "Window: #{authenticator.window}    \n"
                    <> "\t True  Pos: #{authenticator.truePos} \n"
@@ -99,27 +93,27 @@ defmodule Simulator.Logger do
                    <> "\t False Neg: #{authenticator.falseNeg} \n"
   end
 
+  #Update an authenticator's statistic given a new message
   defp update_authenticator(map, content, received, expected) do
 
-    case {content,
-          Auth.authenticate(map.pid,
-                            expected,
-                            received)
-         } do
+    case {content, Auth.authenticate(map.pid,expected,received)} do
 
         {:safe  , :true } -> %{map | truePos:  map.truePos  + 1}
         {:unsafe, :true } -> %{map | falsePos: map.falsePos + 1}
         {:safe  , :false} -> %{map | falseNeg: map.falseNeg + 1}
         {:unsafe, :false} -> %{map | trueNeg:  map.trueNeg  + 1}
         _                 -> map
+
     end
 
   end
 
+  #Print a message tie to the time log file
   defp print_to_time_file file, received, expected do
     IO.binwrite file, "#{received - expected}\n"
   end
 
+  #Print a message to the verbose log file
   defp print_to_log_file file, content, myPid, from, received, conn do
     IO.binwrite file, "Message \"#{content}\" \n"
                   <>  "\tReceived at PID: #{inspect myPid}, from PID: #{inspect from}\n"

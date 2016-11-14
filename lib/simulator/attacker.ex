@@ -28,13 +28,9 @@ defmodule Simulator.Attacker do
     :timer.sleep(:rand.uniform(max_wait))
 
     [a,b|_tail] = users
-
-    case :rand.uniform(2) do
-        1 -> Simulator.NetworkNode.check_if_vulnerable(a, b)
-        2 -> Simulator.NetworkNode.check_if_vulnerable(b, a)
-    end
-
+    Simulator.NetworkNode.check_if_vulnerable(a, b)
     attack(users, max_wait)
+    
   end
 
 end
