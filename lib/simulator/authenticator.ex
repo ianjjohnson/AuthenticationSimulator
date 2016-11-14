@@ -1,7 +1,6 @@
 defmodule Simulator.Authenticator do
 
   use GenServer
-  @me __MODULE__
 
   def start_link windowsize do
     GenServer.start __MODULE__, windowsize
@@ -17,7 +16,7 @@ defmodule Simulator.Authenticator do
   end
 
   def handle_call {:auth, expected, received}, _from, state do
-    {:reply, (received-expected < state.windowsize  && received > expected) , state}
+    {:reply, (received-expected < state.windowsize  && received >= expected) , state}
   end
 
 end

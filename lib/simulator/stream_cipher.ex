@@ -28,6 +28,7 @@ defmodule Simulator.StreamCipher do
   end
 
   def encrypt keystream, key do
+    #Novel encryption "algorithm," for simulations
     rem(key * keystream, @delayrange) + @mindelay
   end
 

@@ -34,8 +34,7 @@ defmodule Simulator.NetworkNode do
     GenServer.cast pid, {:vulnuerable, attacker}
   end
 
-
-
+  #Implementation
 
   def init(_args) do
     Simulator.MeetupServer.register_user
@@ -48,33 +47,36 @@ defmodule Simulator.NetworkNode do
 
   def handle_cast {:vulnuerable, attacker}, state do
     received = Simulator.Clock.current_time
-    [conn] = Enum.filter state, &(&1.pid == attacker)
+    conn = get_conn_by_pid state, attacker
     Logger.log_attack received, conn.expected
     {:noreply, state}
   end
 
+  #This is the case that the new message was a setup message
   def handle_cast {:newMessage, {key, n, time}, from}, state do
 
     Logger.write("Setup received at #{inspect self} from #{inspect from} with params #{inspect {key,n}}\n")
 
-    state =
-    state
-    |> Enum.map(&(set_params(&1,{key, n, time, from})))
+    #Upadate state for new message
+    state = state |> Enum.map(&(set_params(&1,{key, n, time, from})))
 
-    state
-    |> Enum.map(&(Simulator.NetworkNode.add_to_inbox &1.pid, :gotSetup, self))
+    #Send response
+    state |> Enum.map(&(Simulator.NetworkNode.add_to_inbox &1.pid, :gotSetup, self))
 
     {:noreply,state}
 
   end
 
+  #This is the case for a generic non-setup message
   def handle_cast {:newMessage, content, from}, state do
+
+    #Respond to the message (asynchronously)
     received = Simulator.Clock.current_time
     myPid = self
+    spawn(fn -> respond_to_client(from, myPid, state) end)
 
-    spawn(fn -> respond_to(from, myPid, state) end)
-
-    [conn] = Enum.filter state, &(&1.pid == from)
+    #Log the message
+    conn = get_conn_by_pid state, from
     Logger.log content, myPid, from, received, conn
 
     {:noreply, state}
@@ -83,15 +85,10 @@ defmodule Simulator.NetworkNode do
   def handle_cast {:startup}, state do
 
     time = Simulator.Clock.current_time
-    state =
-    state
-    |> Enum.map( &( %{&1 | n: :rand.uniform(@keyrange), key: :rand.uniform(@keyrange), expected: time}))
-
-
-    state
-    |> Enum.map(&(Simulator.NetworkNode.add_to_inbox &1.pid, {&1.key, &1.n, time}, self))
-
+    state = startup_state state, time
+    send_messages state, time
     {:noreply, state}
+
   end
 
   def handle_cast {:setup}, _state do
@@ -106,15 +103,35 @@ defmodule Simulator.NetworkNode do
     {:noreply, [conn | state]}
   end
 
-  defp respond_to recipient, sender, state do
-    [conn] = Enum.filter state, &(&1.pid == recipient)
+  defp send_messages state, time do
+    state
+    |> Enum.map(&(Simulator.NetworkNode.add_to_inbox &1.pid, {&1.key, &1.n, time}, self))
+  end
+
+  defp startup_state state, time do
+    state
+    |> Enum.map( &( %{&1 |
+                      n:        :rand.uniform(@keyrange),
+                      key:      :rand.uniform(@keyrange),
+                      expected: time}))
+  end
+
+  defp respond_to_client recipient, sender, state do
+
+    #Get the expected arrival time of this message
+    conn = get_conn_by_pid state, recipient
     expected = conn.expected
+
+    #Induce delay and update stream cipher for this conn
     {delay, conn} = Simulator.StreamCipher.update(conn)
-    :timer.sleep(delay - (Simulator.Clock.current_time - expected))
+    :timer.sleep(delay - (max(Simulator.Clock.current_time - expected,0)))
+
+    #Respond to message and update state of sender (the person who is sending the response)
     Simulator.NetworkNode.add_to_inbox(recipient, :safe, sender)
     Simulator.NetworkNode.update_connection(sender, conn)
   end
 
+  #Helper method for setting items in a specific map in a list of maps
   defp set_params conn, {key, n, time, from} do
     if conn.pid == from do
       delay = Simulator.StreamCipher.encrypt(n, key)
@@ -122,6 +139,12 @@ defmodule Simulator.NetworkNode do
     else
       conn
     end
+  end
+
+  #Helper method for isolating one connection
+  defp get_conn_by_pid state, pid do
+    [conn] = Enum.filter state, &(&1.pid == pid)
+    conn
   end
 
 end
