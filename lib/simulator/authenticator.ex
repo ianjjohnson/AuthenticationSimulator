@@ -1,7 +1,6 @@
 defmodule Simulator.Authenticator do
 
   use GenServer
-  @me __MODULE__
 
   def start_link windowsize do
     GenServer.start __MODULE__, windowsize
