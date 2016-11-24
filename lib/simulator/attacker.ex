@@ -19,18 +19,19 @@ defmodule Simulator.Attacker do
   end
 
   def handle_cast {:attack}, max_wait do
-    spawn(fn -> attack(Simulator.MeetupServer.get_users, max_wait) end)
+    #spawn(fn -> attack(Simulator.MeetupServer.get_users, max_wait) end)
+    Process.send_after(self, {:attack}, max_wait)
     {:noreply, max_wait}
   end
 
-  defp attack(users, max_wait) do
-
+  def handle_info {:attack}, max_wait do
     :timer.sleep(:rand.uniform(max_wait))
 
-    [a,b|_tail] = users
+    [a,b|_tail] = Simulator.MeetupServer.get_users
     Simulator.NetworkNode.check_if_vulnerable(a, b)
-    attack(users, max_wait)
-    
+    Process.send_after(self, {:attack}, max_wait)
+
+    {:noreply, max_wait}
   end
 
 end

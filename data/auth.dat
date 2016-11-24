@@ -1,50 +1,50 @@
 Window: 1    
 	 True  Pos: 0 
 	 False Pos: 0 
-	 True  Neg: 34 
-	 False Neg: 31 
+	 True  Neg: 38 
+	 False Neg: 384 
 Window: 2    
-	 True  Pos: 11 
-	 False Pos: 1 
-	 True  Neg: 33 
-	 False Neg: 20 
+	 True  Pos: 83 
+	 False Pos: 0 
+	 True  Neg: 38 
+	 False Neg: 301 
 Window: 3    
-	 True  Pos: 14 
-	 False Pos: 1 
-	 True  Neg: 33 
-	 False Neg: 17 
+	 True  Pos: 136 
+	 False Pos: 0 
+	 True  Neg: 38 
+	 False Neg: 248 
 Window: 4    
-	 True  Pos: 19 
+	 True  Pos: 177 
 	 False Pos: 1 
-	 True  Neg: 33 
-	 False Neg: 12 
+	 True  Neg: 37 
+	 False Neg: 207 
 Window: 5    
-	 True  Pos: 22 
-	 False Pos: 1 
-	 True  Neg: 33 
-	 False Neg: 9 
+	 True  Pos: 220 
+	 False Pos: 2 
+	 True  Neg: 36 
+	 False Neg: 164 
 Window: 6    
-	 True  Pos: 27 
-	 False Pos: 1 
-	 True  Neg: 33 
-	 False Neg: 4 
+	 True  Pos: 248 
+	 False Pos: 2 
+	 True  Neg: 36 
+	 False Neg: 136 
 Window: 7    
-	 True  Pos: 31 
-	 False Pos: 1 
-	 True  Neg: 33 
-	 False Neg: 0 
+	 True  Pos: 383 
+	 False Pos: 2 
+	 True  Neg: 36 
+	 False Neg: 1 
 Window: 8    
-	 True  Pos: 31 
-	 False Pos: 1 
-	 True  Neg: 33 
+	 True  Pos: 384 
+	 False Pos: 3 
+	 True  Neg: 35 
 	 False Neg: 0 
 Window: 9    
-	 True  Pos: 31 
-	 False Pos: 1 
-	 True  Neg: 33 
+	 True  Pos: 384 
+	 False Pos: 3 
+	 True  Neg: 35 
 	 False Neg: 0 
 Window: 10    
-	 True  Pos: 31 
-	 False Pos: 1 
-	 True  Neg: 33 
+	 True  Pos: 384 
+	 False Pos: 3 
+	 True  Neg: 35 
 	 False Neg: 0 

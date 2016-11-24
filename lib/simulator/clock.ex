@@ -13,11 +13,11 @@ defmodule Simulator.Clock do
 
 
   def init(_args) do
-    {:ok, :os.system_time(:milli_seconds)}
+    {:ok, :erlang.monotonic_time}
   end
 
   def handle_call {:time}, _from, state do
-    {:reply, :os.system_time(:milli_seconds) - state, state}
+    {:reply, round((:erlang.monotonic_time - state)/1_000_000), state}
   end
 
 end
