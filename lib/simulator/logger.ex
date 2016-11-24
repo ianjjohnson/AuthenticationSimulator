@@ -37,12 +37,7 @@ defmodule Simulator.Logger do
         log: log,
         time: time,
         auth: authFile,
-        authenticators: windowSizes
-                        |> Enum.map(&(%Simulator.Logger{
-                                        pid: Kernel.elem(Auth.start_link(&1), 1),
-                                        window: &1
-                                      }
-                                    ))
+        authenticators: setup_authenticators(windowSizes)
         }
     }
   end
@@ -64,10 +59,7 @@ defmodule Simulator.Logger do
 
     IO.binwrite state.log, "Got attack at time #{received}\n"
 
-    state = %{state | authenticators:
-                      state.authenticators
-                      |> Enum.map(&(update_authenticator(&1, :unsafe, received, expected)))
-    }
+    state = %{state | authenticators: update_authenticators(state, received, expected)}
 
     {:noreply, state}
   end
@@ -93,6 +85,11 @@ defmodule Simulator.Logger do
                    <> "\t False Neg: #{authenticator.falseNeg} \n"
   end
 
+  defp update_authenticators(state, received, expected) do
+    state.authenticators
+    |> Enum.map(&(update_authenticator(&1, :unsafe, received, expected)))
+  end
+
   #Update an authenticator's statistic given a new message
   defp update_authenticator(map, content, received, expected) do
 
@@ -106,6 +103,16 @@ defmodule Simulator.Logger do
 
     end
 
+  end
+
+  defp setup_authenticators(windowSizes) do
+    windowSizes
+    |> Enum.map(&(
+                %Simulator.Logger
+                {
+                    pid: Kernel.elem(Auth.start_link(&1), 1),
+                    window: &1
+                }))
   end
 
   #Print a message tie to the time log file
