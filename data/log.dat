@@ -1,0 +1,1614 @@
+Setup received at #PID<0.102.0> from #PID<0.103.0> with params {66, 33}
+Message "gotSetup" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 2046, expected: 2034
+	Connection: %Simulator.Connection{danger: 0, delay: 0, expected: 2034, key: 66, n: 33, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 2216, expected: 2214
+	Connection: %Simulator.Connection{danger: 2124.0, delay: 0, expected: 2214, key: 66, n: 180, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 2885, expected: 2880
+	Connection: %Simulator.Connection{danger: 2547.0, delay: 0, expected: 2880, key: 66, n: 666, pid: #PID<0.102.0>}
+Got attack at time 2907
+Got attack at time 2957
+Got attack at time 3490
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 3884, expected: 3878
+	Connection: %Simulator.Connection{danger: 3379.0, delay: 0, expected: 3878, key: 66, n: 998, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 4266, expected: 4260
+	Connection: %Simulator.Connection{danger: 4069.0, delay: 0, expected: 4260, key: 66, n: 382, pid: #PID<0.102.0>}
+Got attack at time 4426
+Got attack at time 4664
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 4947, expected: 4946
+	Connection: %Simulator.Connection{danger: 4603.0, delay: 0, expected: 4946, key: 66, n: 686, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 5216, expected: 5216
+	Connection: %Simulator.Connection{danger: 5081.0, delay: 0, expected: 5216, key: 66, n: 270, pid: #PID<0.102.0>}
+Got attack at time 5540
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 5683, expected: 5678
+	Connection: %Simulator.Connection{danger: 5447.0, delay: 0, expected: 5678, key: 66, n: 462, pid: #PID<0.103.0>}
+Got attack at time 5825
+Got attack at time 5985
+Got attack at time 6339
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 6525, expected: 6524
+	Connection: %Simulator.Connection{danger: 6101.0, delay: 0, expected: 6524, key: 66, n: 846, pid: #PID<0.102.0>}
+Got attack at time 6933
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 7119, expected: 7114
+	Connection: %Simulator.Connection{danger: 6819.0, delay: 0, expected: 7114, key: 66, n: 590, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 7193, expected: 7192
+	Connection: %Simulator.Connection{danger: 7153.0, delay: 0, expected: 7192, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 7275, expected: 7270
+	Connection: %Simulator.Connection{danger: 7231.0, delay: 0, expected: 7270, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 7352, expected: 7348
+	Connection: %Simulator.Connection{danger: 7309.0, delay: 0, expected: 7348, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 7429, expected: 7426
+	Connection: %Simulator.Connection{danger: 7387.0, delay: 0, expected: 7426, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 7490
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 7506, expected: 7504
+	Connection: %Simulator.Connection{danger: 7465.0, delay: 0, expected: 7504, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 7584, expected: 7582
+	Connection: %Simulator.Connection{danger: 7543.0, delay: 0, expected: 7582, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 7665, expected: 7660
+	Connection: %Simulator.Connection{danger: 7621.0, delay: 0, expected: 7660, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 7696
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 7741, expected: 7738
+	Connection: %Simulator.Connection{danger: 7699.0, delay: 0, expected: 7738, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 7822, expected: 7816
+	Connection: %Simulator.Connection{danger: 7777.0, delay: 0, expected: 7816, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 7896, expected: 7894
+	Connection: %Simulator.Connection{danger: 7855.0, delay: 0, expected: 7894, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 7977, expected: 7972
+	Connection: %Simulator.Connection{danger: 7933.0, delay: 0, expected: 7972, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 8056, expected: 8050
+	Connection: %Simulator.Connection{danger: 8011.0, delay: 0, expected: 8050, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 8133, expected: 8128
+	Connection: %Simulator.Connection{danger: 8089.0, delay: 0, expected: 8128, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 8207, expected: 8206
+	Connection: %Simulator.Connection{danger: 8167.0, delay: 0, expected: 8206, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 8286, expected: 8284
+	Connection: %Simulator.Connection{danger: 8245.0, delay: 0, expected: 8284, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 8302
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 8367, expected: 8362
+	Connection: %Simulator.Connection{danger: 8323.0, delay: 0, expected: 8362, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 8446, expected: 8440
+	Connection: %Simulator.Connection{danger: 8401.0, delay: 0, expected: 8440, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 8519, expected: 8518
+	Connection: %Simulator.Connection{danger: 8479.0, delay: 0, expected: 8518, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 8600, expected: 8596
+	Connection: %Simulator.Connection{danger: 8557.0, delay: 0, expected: 8596, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 8678, expected: 8674
+	Connection: %Simulator.Connection{danger: 8635.0, delay: 0, expected: 8674, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 8753, expected: 8752
+	Connection: %Simulator.Connection{danger: 8713.0, delay: 0, expected: 8752, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 8834, expected: 8830
+	Connection: %Simulator.Connection{danger: 8791.0, delay: 0, expected: 8830, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 8909, expected: 8908
+	Connection: %Simulator.Connection{danger: 8869.0, delay: 0, expected: 8908, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 8986, expected: 8986
+	Connection: %Simulator.Connection{danger: 8947.0, delay: 0, expected: 8986, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 9065, expected: 9064
+	Connection: %Simulator.Connection{danger: 9025.0, delay: 0, expected: 9064, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 9148, expected: 9142
+	Connection: %Simulator.Connection{danger: 9103.0, delay: 0, expected: 9142, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 9222, expected: 9220
+	Connection: %Simulator.Connection{danger: 9181.0, delay: 0, expected: 9220, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 9269
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 9303, expected: 9298
+	Connection: %Simulator.Connection{danger: 9259.0, delay: 0, expected: 9298, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 9378, expected: 9376
+	Connection: %Simulator.Connection{danger: 9337.0, delay: 0, expected: 9376, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 9455
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 9455, expected: 9454
+	Connection: %Simulator.Connection{danger: 9415.0, delay: 0, expected: 9454, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 9532, expected: 9532
+	Connection: %Simulator.Connection{danger: 9493.0, delay: 0, expected: 9532, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 9616, expected: 9610
+	Connection: %Simulator.Connection{danger: 9571.0, delay: 0, expected: 9610, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 9651
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 9694, expected: 9688
+	Connection: %Simulator.Connection{danger: 9649.0, delay: 0, expected: 9688, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 9772, expected: 9766
+	Connection: %Simulator.Connection{danger: 9727.0, delay: 0, expected: 9766, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 9850, expected: 9844
+	Connection: %Simulator.Connection{danger: 9805.0, delay: 0, expected: 9844, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 9924, expected: 9922
+	Connection: %Simulator.Connection{danger: 9883.0, delay: 0, expected: 9922, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 10005, expected: 10000
+	Connection: %Simulator.Connection{danger: 9961.0, delay: 0, expected: 10000, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 10042
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 10080, expected: 10078
+	Connection: %Simulator.Connection{danger: 10039.0, delay: 0, expected: 10078, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 10160, expected: 10156
+	Connection: %Simulator.Connection{danger: 10117.0, delay: 0, expected: 10156, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 10237, expected: 10234
+	Connection: %Simulator.Connection{danger: 10195.0, delay: 0, expected: 10234, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 10315, expected: 10312
+	Connection: %Simulator.Connection{danger: 10273.0, delay: 0, expected: 10312, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 10357
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 10394, expected: 10390
+	Connection: %Simulator.Connection{danger: 10351.0, delay: 0, expected: 10390, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 10469, expected: 10468
+	Connection: %Simulator.Connection{danger: 10429.0, delay: 0, expected: 10468, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 10552, expected: 10546
+	Connection: %Simulator.Connection{danger: 10507.0, delay: 0, expected: 10546, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 10630, expected: 10624
+	Connection: %Simulator.Connection{danger: 10585.0, delay: 0, expected: 10624, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 10708, expected: 10702
+	Connection: %Simulator.Connection{danger: 10663.0, delay: 0, expected: 10702, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 10783, expected: 10780
+	Connection: %Simulator.Connection{danger: 10741.0, delay: 0, expected: 10780, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 10863, expected: 10858
+	Connection: %Simulator.Connection{danger: 10819.0, delay: 0, expected: 10858, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 10863
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 10940, expected: 10936
+	Connection: %Simulator.Connection{danger: 10897.0, delay: 0, expected: 10936, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 11015, expected: 11014
+	Connection: %Simulator.Connection{danger: 10975.0, delay: 0, expected: 11014, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 11093, expected: 11092
+	Connection: %Simulator.Connection{danger: 11053.0, delay: 0, expected: 11092, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 11171, expected: 11170
+	Connection: %Simulator.Connection{danger: 11131.0, delay: 0, expected: 11170, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 11254, expected: 11248
+	Connection: %Simulator.Connection{danger: 11209.0, delay: 0, expected: 11248, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 11328, expected: 11326
+	Connection: %Simulator.Connection{danger: 11287.0, delay: 0, expected: 11326, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 11410, expected: 11404
+	Connection: %Simulator.Connection{danger: 11365.0, delay: 0, expected: 11404, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 11488, expected: 11482
+	Connection: %Simulator.Connection{danger: 11443.0, delay: 0, expected: 11482, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 11566, expected: 11560
+	Connection: %Simulator.Connection{danger: 11521.0, delay: 0, expected: 11560, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 11622
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 11643, expected: 11638
+	Connection: %Simulator.Connection{danger: 11599.0, delay: 0, expected: 11638, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 11722, expected: 11716
+	Connection: %Simulator.Connection{danger: 11677.0, delay: 0, expected: 11716, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 11795, expected: 11794
+	Connection: %Simulator.Connection{danger: 11755.0, delay: 0, expected: 11794, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 11878, expected: 11872
+	Connection: %Simulator.Connection{danger: 11833.0, delay: 0, expected: 11872, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 11954, expected: 11950
+	Connection: %Simulator.Connection{danger: 11911.0, delay: 0, expected: 11950, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 12034, expected: 12028
+	Connection: %Simulator.Connection{danger: 11989.0, delay: 0, expected: 12028, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 12073
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 12112, expected: 12106
+	Connection: %Simulator.Connection{danger: 12067.0, delay: 0, expected: 12106, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 12185, expected: 12184
+	Connection: %Simulator.Connection{danger: 12145.0, delay: 0, expected: 12184, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 12263, expected: 12262
+	Connection: %Simulator.Connection{danger: 12223.0, delay: 0, expected: 12262, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 12341, expected: 12340
+	Connection: %Simulator.Connection{danger: 12301.0, delay: 0, expected: 12340, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 12423, expected: 12418
+	Connection: %Simulator.Connection{danger: 12379.0, delay: 0, expected: 12418, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 12497, expected: 12496
+	Connection: %Simulator.Connection{danger: 12457.0, delay: 0, expected: 12496, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 12578, expected: 12574
+	Connection: %Simulator.Connection{danger: 12535.0, delay: 0, expected: 12574, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 12658, expected: 12652
+	Connection: %Simulator.Connection{danger: 12613.0, delay: 0, expected: 12652, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 12731, expected: 12730
+	Connection: %Simulator.Connection{danger: 12691.0, delay: 0, expected: 12730, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 12812, expected: 12808
+	Connection: %Simulator.Connection{danger: 12769.0, delay: 0, expected: 12808, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 12892, expected: 12886
+	Connection: %Simulator.Connection{danger: 12847.0, delay: 0, expected: 12886, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 12967, expected: 12964
+	Connection: %Simulator.Connection{danger: 12925.0, delay: 0, expected: 12964, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 12975
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 13046, expected: 13042
+	Connection: %Simulator.Connection{danger: 13003.0, delay: 0, expected: 13042, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 13046
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 13125, expected: 13120
+	Connection: %Simulator.Connection{danger: 13081.0, delay: 0, expected: 13120, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 13199, expected: 13198
+	Connection: %Simulator.Connection{danger: 13159.0, delay: 0, expected: 13198, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 13277, expected: 13276
+	Connection: %Simulator.Connection{danger: 13237.0, delay: 0, expected: 13276, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 13360, expected: 13354
+	Connection: %Simulator.Connection{danger: 13315.0, delay: 0, expected: 13354, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 13433, expected: 13432
+	Connection: %Simulator.Connection{danger: 13393.0, delay: 0, expected: 13432, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 13514, expected: 13510
+	Connection: %Simulator.Connection{danger: 13471.0, delay: 0, expected: 13510, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 13591, expected: 13588
+	Connection: %Simulator.Connection{danger: 13549.0, delay: 0, expected: 13588, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 13668, expected: 13666
+	Connection: %Simulator.Connection{danger: 13627.0, delay: 0, expected: 13666, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 13726
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 13746, expected: 13744
+	Connection: %Simulator.Connection{danger: 13705.0, delay: 0, expected: 13744, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 13824, expected: 13822
+	Connection: %Simulator.Connection{danger: 13783.0, delay: 0, expected: 13822, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 13901, expected: 13900
+	Connection: %Simulator.Connection{danger: 13861.0, delay: 0, expected: 13900, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 13981, expected: 13978
+	Connection: %Simulator.Connection{danger: 13939.0, delay: 0, expected: 13978, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 14057, expected: 14056
+	Connection: %Simulator.Connection{danger: 14017.0, delay: 0, expected: 14056, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 14123
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 14137, expected: 14134
+	Connection: %Simulator.Connection{danger: 14095.0, delay: 0, expected: 14134, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 14218, expected: 14212
+	Connection: %Simulator.Connection{danger: 14173.0, delay: 0, expected: 14212, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 14219
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 14294, expected: 14290
+	Connection: %Simulator.Connection{danger: 14251.0, delay: 0, expected: 14290, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 14371, expected: 14368
+	Connection: %Simulator.Connection{danger: 14329.0, delay: 0, expected: 14368, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 14447, expected: 14446
+	Connection: %Simulator.Connection{danger: 14407.0, delay: 0, expected: 14446, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 14529, expected: 14524
+	Connection: %Simulator.Connection{danger: 14485.0, delay: 0, expected: 14524, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 14604, expected: 14602
+	Connection: %Simulator.Connection{danger: 14563.0, delay: 0, expected: 14602, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 14685, expected: 14680
+	Connection: %Simulator.Connection{danger: 14641.0, delay: 0, expected: 14680, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 14762, expected: 14758
+	Connection: %Simulator.Connection{danger: 14719.0, delay: 0, expected: 14758, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 14803
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 14836, expected: 14836
+	Connection: %Simulator.Connection{danger: 14797.0, delay: 0, expected: 14836, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 14915, expected: 14914
+	Connection: %Simulator.Connection{danger: 14875.0, delay: 0, expected: 14914, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 14994, expected: 14992
+	Connection: %Simulator.Connection{danger: 14953.0, delay: 0, expected: 14992, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 15071, expected: 15070
+	Connection: %Simulator.Connection{danger: 15031.0, delay: 0, expected: 15070, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 15149, expected: 15148
+	Connection: %Simulator.Connection{danger: 15109.0, delay: 0, expected: 15148, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 15229, expected: 15226
+	Connection: %Simulator.Connection{danger: 15187.0, delay: 0, expected: 15226, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 15290
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 15305, expected: 15304
+	Connection: %Simulator.Connection{danger: 15265.0, delay: 0, expected: 15304, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 15384, expected: 15382
+	Connection: %Simulator.Connection{danger: 15343.0, delay: 0, expected: 15382, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 15461, expected: 15460
+	Connection: %Simulator.Connection{danger: 15421.0, delay: 0, expected: 15460, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 15542, expected: 15538
+	Connection: %Simulator.Connection{danger: 15499.0, delay: 0, expected: 15538, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 15617, expected: 15616
+	Connection: %Simulator.Connection{danger: 15577.0, delay: 0, expected: 15616, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 15696, expected: 15694
+	Connection: %Simulator.Connection{danger: 15655.0, delay: 0, expected: 15694, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 15776, expected: 15772
+	Connection: %Simulator.Connection{danger: 15733.0, delay: 0, expected: 15772, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 15850, expected: 15850
+	Connection: %Simulator.Connection{danger: 15811.0, delay: 0, expected: 15850, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 15934, expected: 15928
+	Connection: %Simulator.Connection{danger: 15889.0, delay: 0, expected: 15928, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 16006, expected: 16006
+	Connection: %Simulator.Connection{danger: 15967.0, delay: 0, expected: 16006, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 16088, expected: 16084
+	Connection: %Simulator.Connection{danger: 16045.0, delay: 0, expected: 16084, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 16163, expected: 16162
+	Connection: %Simulator.Connection{danger: 16123.0, delay: 0, expected: 16162, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 16215
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 16245, expected: 16240
+	Connection: %Simulator.Connection{danger: 16201.0, delay: 0, expected: 16240, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 16320, expected: 16318
+	Connection: %Simulator.Connection{danger: 16279.0, delay: 0, expected: 16318, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 16396, expected: 16396
+	Connection: %Simulator.Connection{danger: 16357.0, delay: 0, expected: 16396, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 16478, expected: 16474
+	Connection: %Simulator.Connection{danger: 16435.0, delay: 0, expected: 16474, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 16552, expected: 16552
+	Connection: %Simulator.Connection{danger: 16513.0, delay: 0, expected: 16552, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 16636, expected: 16630
+	Connection: %Simulator.Connection{danger: 16591.0, delay: 0, expected: 16630, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 16713, expected: 16708
+	Connection: %Simulator.Connection{danger: 16669.0, delay: 0, expected: 16708, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 16791, expected: 16786
+	Connection: %Simulator.Connection{danger: 16747.0, delay: 0, expected: 16786, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 16831
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 16869, expected: 16864
+	Connection: %Simulator.Connection{danger: 16825.0, delay: 0, expected: 16864, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 16943, expected: 16942
+	Connection: %Simulator.Connection{danger: 16903.0, delay: 0, expected: 16942, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 17022, expected: 17020
+	Connection: %Simulator.Connection{danger: 16981.0, delay: 0, expected: 17020, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 17097
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 17098, expected: 17098
+	Connection: %Simulator.Connection{danger: 17059.0, delay: 0, expected: 17098, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 17177, expected: 17176
+	Connection: %Simulator.Connection{danger: 17137.0, delay: 0, expected: 17176, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 17260, expected: 17254
+	Connection: %Simulator.Connection{danger: 17215.0, delay: 0, expected: 17254, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 17294
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 17332, expected: 17332
+	Connection: %Simulator.Connection{danger: 17293.0, delay: 0, expected: 17332, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 17346
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 17415, expected: 17410
+	Connection: %Simulator.Connection{danger: 17371.0, delay: 0, expected: 17410, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 17494, expected: 17488
+	Connection: %Simulator.Connection{danger: 17449.0, delay: 0, expected: 17488, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 17567, expected: 17566
+	Connection: %Simulator.Connection{danger: 17527.0, delay: 0, expected: 17566, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 17648, expected: 17644
+	Connection: %Simulator.Connection{danger: 17605.0, delay: 0, expected: 17644, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 17724, expected: 17722
+	Connection: %Simulator.Connection{danger: 17683.0, delay: 0, expected: 17722, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 17802, expected: 17800
+	Connection: %Simulator.Connection{danger: 17761.0, delay: 0, expected: 17800, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 17879, expected: 17878
+	Connection: %Simulator.Connection{danger: 17839.0, delay: 0, expected: 17878, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 17959, expected: 17956
+	Connection: %Simulator.Connection{danger: 17917.0, delay: 0, expected: 17956, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 18036, expected: 18034
+	Connection: %Simulator.Connection{danger: 17995.0, delay: 0, expected: 18034, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 18117, expected: 18112
+	Connection: %Simulator.Connection{danger: 18073.0, delay: 0, expected: 18112, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 18167
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 18195, expected: 18190
+	Connection: %Simulator.Connection{danger: 18151.0, delay: 0, expected: 18190, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 18269, expected: 18268
+	Connection: %Simulator.Connection{danger: 18229.0, delay: 0, expected: 18268, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 18350, expected: 18346
+	Connection: %Simulator.Connection{danger: 18307.0, delay: 0, expected: 18346, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 18425, expected: 18424
+	Connection: %Simulator.Connection{danger: 18385.0, delay: 0, expected: 18424, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 18503, expected: 18502
+	Connection: %Simulator.Connection{danger: 18463.0, delay: 0, expected: 18502, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 18507
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 18580, expected: 18580
+	Connection: %Simulator.Connection{danger: 18541.0, delay: 0, expected: 18580, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 18659, expected: 18658
+	Connection: %Simulator.Connection{danger: 18619.0, delay: 0, expected: 18658, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 18741, expected: 18736
+	Connection: %Simulator.Connection{danger: 18697.0, delay: 0, expected: 18736, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 18815, expected: 18814
+	Connection: %Simulator.Connection{danger: 18775.0, delay: 0, expected: 18814, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 18897, expected: 18892
+	Connection: %Simulator.Connection{danger: 18853.0, delay: 0, expected: 18892, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 18973, expected: 18970
+	Connection: %Simulator.Connection{danger: 18931.0, delay: 0, expected: 18970, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 19051, expected: 19048
+	Connection: %Simulator.Connection{danger: 19009.0, delay: 0, expected: 19048, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 19131, expected: 19126
+	Connection: %Simulator.Connection{danger: 19087.0, delay: 0, expected: 19126, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 19159
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 19208, expected: 19204
+	Connection: %Simulator.Connection{danger: 19165.0, delay: 0, expected: 19204, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 19287, expected: 19282
+	Connection: %Simulator.Connection{danger: 19243.0, delay: 0, expected: 19282, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 19365, expected: 19360
+	Connection: %Simulator.Connection{danger: 19321.0, delay: 0, expected: 19360, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 19441, expected: 19438
+	Connection: %Simulator.Connection{danger: 19399.0, delay: 0, expected: 19438, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 19521, expected: 19516
+	Connection: %Simulator.Connection{danger: 19477.0, delay: 0, expected: 19516, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 19597, expected: 19594
+	Connection: %Simulator.Connection{danger: 19555.0, delay: 0, expected: 19594, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 19673, expected: 19672
+	Connection: %Simulator.Connection{danger: 19633.0, delay: 0, expected: 19672, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 19755, expected: 19750
+	Connection: %Simulator.Connection{danger: 19711.0, delay: 0, expected: 19750, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 19831, expected: 19828
+	Connection: %Simulator.Connection{danger: 19789.0, delay: 0, expected: 19828, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 19906, expected: 19906
+	Connection: %Simulator.Connection{danger: 19867.0, delay: 0, expected: 19906, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 19973
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 19987, expected: 19984
+	Connection: %Simulator.Connection{danger: 19945.0, delay: 0, expected: 19984, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 20068, expected: 20062
+	Connection: %Simulator.Connection{danger: 20023.0, delay: 0, expected: 20062, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 20141, expected: 20140
+	Connection: %Simulator.Connection{danger: 20101.0, delay: 0, expected: 20140, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 20223, expected: 20218
+	Connection: %Simulator.Connection{danger: 20179.0, delay: 0, expected: 20218, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 20298, expected: 20296
+	Connection: %Simulator.Connection{danger: 20257.0, delay: 0, expected: 20296, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 20376, expected: 20374
+	Connection: %Simulator.Connection{danger: 20335.0, delay: 0, expected: 20374, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 20452, expected: 20452
+	Connection: %Simulator.Connection{danger: 20413.0, delay: 0, expected: 20452, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 20530
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 20531, expected: 20530
+	Connection: %Simulator.Connection{danger: 20491.0, delay: 0, expected: 20530, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 20613, expected: 20608
+	Connection: %Simulator.Connection{danger: 20569.0, delay: 0, expected: 20608, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 20688, expected: 20686
+	Connection: %Simulator.Connection{danger: 20647.0, delay: 0, expected: 20686, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 20764, expected: 20764
+	Connection: %Simulator.Connection{danger: 20725.0, delay: 0, expected: 20764, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 20774
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 20844, expected: 20842
+	Connection: %Simulator.Connection{danger: 20803.0, delay: 0, expected: 20842, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 20921, expected: 20920
+	Connection: %Simulator.Connection{danger: 20881.0, delay: 0, expected: 20920, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 21001, expected: 20998
+	Connection: %Simulator.Connection{danger: 20959.0, delay: 0, expected: 20998, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 21081, expected: 21076
+	Connection: %Simulator.Connection{danger: 21037.0, delay: 0, expected: 21076, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 21134
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 21154, expected: 21154
+	Connection: %Simulator.Connection{danger: 21115.0, delay: 0, expected: 21154, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 21236, expected: 21232
+	Connection: %Simulator.Connection{danger: 21193.0, delay: 0, expected: 21232, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 21313, expected: 21310
+	Connection: %Simulator.Connection{danger: 21271.0, delay: 0, expected: 21310, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 21393, expected: 21388
+	Connection: %Simulator.Connection{danger: 21349.0, delay: 0, expected: 21388, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 21471, expected: 21466
+	Connection: %Simulator.Connection{danger: 21427.0, delay: 0, expected: 21466, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 21550, expected: 21544
+	Connection: %Simulator.Connection{danger: 21505.0, delay: 0, expected: 21544, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 21625, expected: 21622
+	Connection: %Simulator.Connection{danger: 21583.0, delay: 0, expected: 21622, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 21704, expected: 21700
+	Connection: %Simulator.Connection{danger: 21661.0, delay: 0, expected: 21700, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 21779, expected: 21778
+	Connection: %Simulator.Connection{danger: 21739.0, delay: 0, expected: 21778, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 21787
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 21860, expected: 21856
+	Connection: %Simulator.Connection{danger: 21817.0, delay: 0, expected: 21856, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 21885
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 21940, expected: 21934
+	Connection: %Simulator.Connection{danger: 21895.0, delay: 0, expected: 21934, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 22018, expected: 22012
+	Connection: %Simulator.Connection{danger: 21973.0, delay: 0, expected: 22012, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 22095, expected: 22090
+	Connection: %Simulator.Connection{danger: 22051.0, delay: 0, expected: 22090, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 22174, expected: 22168
+	Connection: %Simulator.Connection{danger: 22129.0, delay: 0, expected: 22168, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 22247, expected: 22246
+	Connection: %Simulator.Connection{danger: 22207.0, delay: 0, expected: 22246, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 22328, expected: 22324
+	Connection: %Simulator.Connection{danger: 22285.0, delay: 0, expected: 22324, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 22402, expected: 22402
+	Connection: %Simulator.Connection{danger: 22363.0, delay: 0, expected: 22402, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 22482, expected: 22480
+	Connection: %Simulator.Connection{danger: 22441.0, delay: 0, expected: 22480, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 22564, expected: 22558
+	Connection: %Simulator.Connection{danger: 22519.0, delay: 0, expected: 22558, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 22637, expected: 22636
+	Connection: %Simulator.Connection{danger: 22597.0, delay: 0, expected: 22636, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 22720, expected: 22714
+	Connection: %Simulator.Connection{danger: 22675.0, delay: 0, expected: 22714, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 22796, expected: 22792
+	Connection: %Simulator.Connection{danger: 22753.0, delay: 0, expected: 22792, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 22873, expected: 22870
+	Connection: %Simulator.Connection{danger: 22831.0, delay: 0, expected: 22870, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 22903
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 22948, expected: 22948
+	Connection: %Simulator.Connection{danger: 22909.0, delay: 0, expected: 22948, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 23031, expected: 23026
+	Connection: %Simulator.Connection{danger: 22987.0, delay: 0, expected: 23026, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 23109, expected: 23104
+	Connection: %Simulator.Connection{danger: 23065.0, delay: 0, expected: 23104, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 23184, expected: 23182
+	Connection: %Simulator.Connection{danger: 23143.0, delay: 0, expected: 23182, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 23260, expected: 23260
+	Connection: %Simulator.Connection{danger: 23221.0, delay: 0, expected: 23260, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 23341, expected: 23338
+	Connection: %Simulator.Connection{danger: 23299.0, delay: 0, expected: 23338, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 23422, expected: 23416
+	Connection: %Simulator.Connection{danger: 23377.0, delay: 0, expected: 23416, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 23499, expected: 23494
+	Connection: %Simulator.Connection{danger: 23455.0, delay: 0, expected: 23494, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 23532
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 23573, expected: 23572
+	Connection: %Simulator.Connection{danger: 23533.0, delay: 0, expected: 23572, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 23653, expected: 23650
+	Connection: %Simulator.Connection{danger: 23611.0, delay: 0, expected: 23650, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 23732, expected: 23728
+	Connection: %Simulator.Connection{danger: 23689.0, delay: 0, expected: 23728, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 23806, expected: 23806
+	Connection: %Simulator.Connection{danger: 23767.0, delay: 0, expected: 23806, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 23889, expected: 23884
+	Connection: %Simulator.Connection{danger: 23845.0, delay: 0, expected: 23884, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 23964, expected: 23962
+	Connection: %Simulator.Connection{danger: 23923.0, delay: 0, expected: 23962, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 24046, expected: 24040
+	Connection: %Simulator.Connection{danger: 24001.0, delay: 0, expected: 24040, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 24081
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 24124, expected: 24118
+	Connection: %Simulator.Connection{danger: 24079.0, delay: 0, expected: 24118, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 24162
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 24198, expected: 24196
+	Connection: %Simulator.Connection{danger: 24157.0, delay: 0, expected: 24196, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 24254
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 24278, expected: 24274
+	Connection: %Simulator.Connection{danger: 24235.0, delay: 0, expected: 24274, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 24358, expected: 24352
+	Connection: %Simulator.Connection{danger: 24313.0, delay: 0, expected: 24352, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 24431, expected: 24430
+	Connection: %Simulator.Connection{danger: 24391.0, delay: 0, expected: 24430, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 24509, expected: 24508
+	Connection: %Simulator.Connection{danger: 24469.0, delay: 0, expected: 24508, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 24587, expected: 24586
+	Connection: %Simulator.Connection{danger: 24547.0, delay: 0, expected: 24586, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 24665, expected: 24664
+	Connection: %Simulator.Connection{danger: 24625.0, delay: 0, expected: 24664, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 24743, expected: 24742
+	Connection: %Simulator.Connection{danger: 24703.0, delay: 0, expected: 24742, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 24822, expected: 24820
+	Connection: %Simulator.Connection{danger: 24781.0, delay: 0, expected: 24820, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 24901, expected: 24898
+	Connection: %Simulator.Connection{danger: 24859.0, delay: 0, expected: 24898, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 24979, expected: 24976
+	Connection: %Simulator.Connection{danger: 24937.0, delay: 0, expected: 24976, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 25059, expected: 25054
+	Connection: %Simulator.Connection{danger: 25015.0, delay: 0, expected: 25054, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 25137, expected: 25132
+	Connection: %Simulator.Connection{danger: 25093.0, delay: 0, expected: 25132, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 25204
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 25213, expected: 25210
+	Connection: %Simulator.Connection{danger: 25171.0, delay: 0, expected: 25210, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 25290, expected: 25288
+	Connection: %Simulator.Connection{danger: 25249.0, delay: 0, expected: 25288, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 25371, expected: 25366
+	Connection: %Simulator.Connection{danger: 25327.0, delay: 0, expected: 25366, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 25448, expected: 25444
+	Connection: %Simulator.Connection{danger: 25405.0, delay: 0, expected: 25444, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 25527, expected: 25522
+	Connection: %Simulator.Connection{danger: 25483.0, delay: 0, expected: 25522, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 25601, expected: 25600
+	Connection: %Simulator.Connection{danger: 25561.0, delay: 0, expected: 25600, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 25676
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 25679, expected: 25678
+	Connection: %Simulator.Connection{danger: 25639.0, delay: 0, expected: 25678, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 25757, expected: 25756
+	Connection: %Simulator.Connection{danger: 25717.0, delay: 0, expected: 25756, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 25840, expected: 25834
+	Connection: %Simulator.Connection{danger: 25795.0, delay: 0, expected: 25834, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 25914, expected: 25912
+	Connection: %Simulator.Connection{danger: 25873.0, delay: 0, expected: 25912, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 25990, expected: 25990
+	Connection: %Simulator.Connection{danger: 25951.0, delay: 0, expected: 25990, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 26072, expected: 26068
+	Connection: %Simulator.Connection{danger: 26029.0, delay: 0, expected: 26068, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 26148, expected: 26146
+	Connection: %Simulator.Connection{danger: 26107.0, delay: 0, expected: 26146, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 26205
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 26230, expected: 26224
+	Connection: %Simulator.Connection{danger: 26185.0, delay: 0, expected: 26224, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 26308, expected: 26302
+	Connection: %Simulator.Connection{danger: 26263.0, delay: 0, expected: 26302, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 26382, expected: 26380
+	Connection: %Simulator.Connection{danger: 26341.0, delay: 0, expected: 26380, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 26460, expected: 26458
+	Connection: %Simulator.Connection{danger: 26419.0, delay: 0, expected: 26458, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 26542, expected: 26536
+	Connection: %Simulator.Connection{danger: 26497.0, delay: 0, expected: 26536, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 26589
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 26617, expected: 26614
+	Connection: %Simulator.Connection{danger: 26575.0, delay: 0, expected: 26614, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 26697
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 26697, expected: 26692
+	Connection: %Simulator.Connection{danger: 26653.0, delay: 0, expected: 26692, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 26774, expected: 26770
+	Connection: %Simulator.Connection{danger: 26731.0, delay: 0, expected: 26770, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 26850, expected: 26848
+	Connection: %Simulator.Connection{danger: 26809.0, delay: 0, expected: 26848, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 26930, expected: 26926
+	Connection: %Simulator.Connection{danger: 26887.0, delay: 0, expected: 26926, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 27009, expected: 27004
+	Connection: %Simulator.Connection{danger: 26965.0, delay: 0, expected: 27004, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 27088, expected: 27082
+	Connection: %Simulator.Connection{danger: 27043.0, delay: 0, expected: 27082, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 27166, expected: 27160
+	Connection: %Simulator.Connection{danger: 27121.0, delay: 0, expected: 27160, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 27240, expected: 27238
+	Connection: %Simulator.Connection{danger: 27199.0, delay: 0, expected: 27238, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 27320, expected: 27316
+	Connection: %Simulator.Connection{danger: 27277.0, delay: 0, expected: 27316, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 27398, expected: 27394
+	Connection: %Simulator.Connection{danger: 27355.0, delay: 0, expected: 27394, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 27411
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 27478, expected: 27472
+	Connection: %Simulator.Connection{danger: 27433.0, delay: 0, expected: 27472, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 27552, expected: 27550
+	Connection: %Simulator.Connection{danger: 27511.0, delay: 0, expected: 27550, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 27571
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 27629, expected: 27628
+	Connection: %Simulator.Connection{danger: 27589.0, delay: 0, expected: 27628, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 27707, expected: 27706
+	Connection: %Simulator.Connection{danger: 27667.0, delay: 0, expected: 27706, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 27785, expected: 27784
+	Connection: %Simulator.Connection{danger: 27745.0, delay: 0, expected: 27784, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 27864, expected: 27862
+	Connection: %Simulator.Connection{danger: 27823.0, delay: 0, expected: 27862, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 27943, expected: 27940
+	Connection: %Simulator.Connection{danger: 27901.0, delay: 0, expected: 27940, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 28023, expected: 28018
+	Connection: %Simulator.Connection{danger: 27979.0, delay: 0, expected: 28018, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 28099, expected: 28096
+	Connection: %Simulator.Connection{danger: 28057.0, delay: 0, expected: 28096, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 28176, expected: 28174
+	Connection: %Simulator.Connection{danger: 28135.0, delay: 0, expected: 28174, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 28256, expected: 28252
+	Connection: %Simulator.Connection{danger: 28213.0, delay: 0, expected: 28252, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 28294
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 28333, expected: 28330
+	Connection: %Simulator.Connection{danger: 28291.0, delay: 0, expected: 28330, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 28414, expected: 28408
+	Connection: %Simulator.Connection{danger: 28369.0, delay: 0, expected: 28408, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 28490, expected: 28486
+	Connection: %Simulator.Connection{danger: 28447.0, delay: 0, expected: 28486, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 28510
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 28566, expected: 28564
+	Connection: %Simulator.Connection{danger: 28525.0, delay: 0, expected: 28564, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 28646, expected: 28642
+	Connection: %Simulator.Connection{danger: 28603.0, delay: 0, expected: 28642, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 28724, expected: 28720
+	Connection: %Simulator.Connection{danger: 28681.0, delay: 0, expected: 28720, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 28802, expected: 28798
+	Connection: %Simulator.Connection{danger: 28759.0, delay: 0, expected: 28798, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 28877, expected: 28876
+	Connection: %Simulator.Connection{danger: 28837.0, delay: 0, expected: 28876, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 28956, expected: 28954
+	Connection: %Simulator.Connection{danger: 28915.0, delay: 0, expected: 28954, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 29008
+Got attack at time 29028
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 29034, expected: 29032
+	Connection: %Simulator.Connection{danger: 28993.0, delay: 0, expected: 29032, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 29113, expected: 29110
+	Connection: %Simulator.Connection{danger: 29071.0, delay: 0, expected: 29110, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 29189, expected: 29188
+	Connection: %Simulator.Connection{danger: 29149.0, delay: 0, expected: 29188, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 29267, expected: 29266
+	Connection: %Simulator.Connection{danger: 29227.0, delay: 0, expected: 29266, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 29346
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 29346, expected: 29344
+	Connection: %Simulator.Connection{danger: 29305.0, delay: 0, expected: 29344, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 29426, expected: 29422
+	Connection: %Simulator.Connection{danger: 29383.0, delay: 0, expected: 29422, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 29505, expected: 29500
+	Connection: %Simulator.Connection{danger: 29461.0, delay: 0, expected: 29500, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 29582, expected: 29578
+	Connection: %Simulator.Connection{danger: 29539.0, delay: 0, expected: 29578, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 29657, expected: 29656
+	Connection: %Simulator.Connection{danger: 29617.0, delay: 0, expected: 29656, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 29735, expected: 29734
+	Connection: %Simulator.Connection{danger: 29695.0, delay: 0, expected: 29734, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 29815, expected: 29812
+	Connection: %Simulator.Connection{danger: 29773.0, delay: 0, expected: 29812, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 29887
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 29892, expected: 29890
+	Connection: %Simulator.Connection{danger: 29851.0, delay: 0, expected: 29890, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 29974, expected: 29968
+	Connection: %Simulator.Connection{danger: 29929.0, delay: 0, expected: 29968, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 30051, expected: 30046
+	Connection: %Simulator.Connection{danger: 30007.0, delay: 0, expected: 30046, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 30125, expected: 30124
+	Connection: %Simulator.Connection{danger: 30085.0, delay: 0, expected: 30124, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 30202, expected: 30202
+	Connection: %Simulator.Connection{danger: 30163.0, delay: 0, expected: 30202, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 30283, expected: 30280
+	Connection: %Simulator.Connection{danger: 30241.0, delay: 0, expected: 30280, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 30362, expected: 30358
+	Connection: %Simulator.Connection{danger: 30319.0, delay: 0, expected: 30358, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 30437, expected: 30436
+	Connection: %Simulator.Connection{danger: 30397.0, delay: 0, expected: 30436, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 30516, expected: 30514
+	Connection: %Simulator.Connection{danger: 30475.0, delay: 0, expected: 30514, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 30519
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 30596, expected: 30592
+	Connection: %Simulator.Connection{danger: 30553.0, delay: 0, expected: 30592, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 30670, expected: 30670
+	Connection: %Simulator.Connection{danger: 30631.0, delay: 0, expected: 30670, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 30750, expected: 30748
+	Connection: %Simulator.Connection{danger: 30709.0, delay: 0, expected: 30748, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 30829, expected: 30826
+	Connection: %Simulator.Connection{danger: 30787.0, delay: 0, expected: 30826, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 30905, expected: 30904
+	Connection: %Simulator.Connection{danger: 30865.0, delay: 0, expected: 30904, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 30983, expected: 30982
+	Connection: %Simulator.Connection{danger: 30943.0, delay: 0, expected: 30982, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 31064, expected: 31060
+	Connection: %Simulator.Connection{danger: 31021.0, delay: 0, expected: 31060, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 31139, expected: 31138
+	Connection: %Simulator.Connection{danger: 31099.0, delay: 0, expected: 31138, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 31191
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 31221, expected: 31216
+	Connection: %Simulator.Connection{danger: 31177.0, delay: 0, expected: 31216, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 31296, expected: 31294
+	Connection: %Simulator.Connection{danger: 31255.0, delay: 0, expected: 31294, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 31376, expected: 31372
+	Connection: %Simulator.Connection{danger: 31333.0, delay: 0, expected: 31372, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 31454, expected: 31450
+	Connection: %Simulator.Connection{danger: 31411.0, delay: 0, expected: 31450, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 31529, expected: 31528
+	Connection: %Simulator.Connection{danger: 31489.0, delay: 0, expected: 31528, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 31606, expected: 31606
+	Connection: %Simulator.Connection{danger: 31567.0, delay: 0, expected: 31606, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 31642
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 31685, expected: 31684
+	Connection: %Simulator.Connection{danger: 31645.0, delay: 0, expected: 31684, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 31750
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 31766, expected: 31762
+	Connection: %Simulator.Connection{danger: 31723.0, delay: 0, expected: 31762, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 31845, expected: 31840
+	Connection: %Simulator.Connection{danger: 31801.0, delay: 0, expected: 31840, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 31920, expected: 31918
+	Connection: %Simulator.Connection{danger: 31879.0, delay: 0, expected: 31918, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 32000, expected: 31996
+	Connection: %Simulator.Connection{danger: 31957.0, delay: 0, expected: 31996, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 32075, expected: 32074
+	Connection: %Simulator.Connection{danger: 32035.0, delay: 0, expected: 32074, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 32157, expected: 32152
+	Connection: %Simulator.Connection{danger: 32113.0, delay: 0, expected: 32152, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 32233, expected: 32230
+	Connection: %Simulator.Connection{danger: 32191.0, delay: 0, expected: 32230, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 32309, expected: 32308
+	Connection: %Simulator.Connection{danger: 32269.0, delay: 0, expected: 32308, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 32391, expected: 32386
+	Connection: %Simulator.Connection{danger: 32347.0, delay: 0, expected: 32386, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 32469, expected: 32464
+	Connection: %Simulator.Connection{danger: 32425.0, delay: 0, expected: 32464, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 32542, expected: 32542
+	Connection: %Simulator.Connection{danger: 32503.0, delay: 0, expected: 32542, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 32622, expected: 32620
+	Connection: %Simulator.Connection{danger: 32581.0, delay: 0, expected: 32620, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 32700, expected: 32698
+	Connection: %Simulator.Connection{danger: 32659.0, delay: 0, expected: 32698, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 32767
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 32779, expected: 32776
+	Connection: %Simulator.Connection{danger: 32737.0, delay: 0, expected: 32776, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 32833
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 32859, expected: 32854
+	Connection: %Simulator.Connection{danger: 32815.0, delay: 0, expected: 32854, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 32933, expected: 32932
+	Connection: %Simulator.Connection{danger: 32893.0, delay: 0, expected: 32932, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 33010, expected: 33010
+	Connection: %Simulator.Connection{danger: 32971.0, delay: 0, expected: 33010, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 33082
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 33090, expected: 33088
+	Connection: %Simulator.Connection{danger: 33049.0, delay: 0, expected: 33088, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 33096
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 33167, expected: 33166
+	Connection: %Simulator.Connection{danger: 33127.0, delay: 0, expected: 33166, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 33249, expected: 33244
+	Connection: %Simulator.Connection{danger: 33205.0, delay: 0, expected: 33244, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 33326, expected: 33322
+	Connection: %Simulator.Connection{danger: 33283.0, delay: 0, expected: 33322, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 33401, expected: 33400
+	Connection: %Simulator.Connection{danger: 33361.0, delay: 0, expected: 33400, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 33480, expected: 33478
+	Connection: %Simulator.Connection{danger: 33439.0, delay: 0, expected: 33478, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 33560, expected: 33556
+	Connection: %Simulator.Connection{danger: 33517.0, delay: 0, expected: 33556, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 33639, expected: 33634
+	Connection: %Simulator.Connection{danger: 33595.0, delay: 0, expected: 33634, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 33692
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 33716, expected: 33712
+	Connection: %Simulator.Connection{danger: 33673.0, delay: 0, expected: 33712, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 33796, expected: 33790
+	Connection: %Simulator.Connection{danger: 33751.0, delay: 0, expected: 33790, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 33863
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 33869, expected: 33868
+	Connection: %Simulator.Connection{danger: 33829.0, delay: 0, expected: 33868, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 33949, expected: 33946
+	Connection: %Simulator.Connection{danger: 33907.0, delay: 0, expected: 33946, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 34025, expected: 34024
+	Connection: %Simulator.Connection{danger: 33985.0, delay: 0, expected: 34024, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 34105, expected: 34102
+	Connection: %Simulator.Connection{danger: 34063.0, delay: 0, expected: 34102, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 34181, expected: 34180
+	Connection: %Simulator.Connection{danger: 34141.0, delay: 0, expected: 34180, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 34255
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 34259, expected: 34258
+	Connection: %Simulator.Connection{danger: 34219.0, delay: 0, expected: 34258, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 34340, expected: 34336
+	Connection: %Simulator.Connection{danger: 34297.0, delay: 0, expected: 34336, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 34416, expected: 34414
+	Connection: %Simulator.Connection{danger: 34375.0, delay: 0, expected: 34414, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 34497, expected: 34492
+	Connection: %Simulator.Connection{danger: 34453.0, delay: 0, expected: 34492, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 34571, expected: 34570
+	Connection: %Simulator.Connection{danger: 34531.0, delay: 0, expected: 34570, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 34650, expected: 34648
+	Connection: %Simulator.Connection{danger: 34609.0, delay: 0, expected: 34648, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 34728, expected: 34726
+	Connection: %Simulator.Connection{danger: 34687.0, delay: 0, expected: 34726, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 34806, expected: 34804
+	Connection: %Simulator.Connection{danger: 34765.0, delay: 0, expected: 34804, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 34884, expected: 34882
+	Connection: %Simulator.Connection{danger: 34843.0, delay: 0, expected: 34882, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 34961, expected: 34960
+	Connection: %Simulator.Connection{danger: 34921.0, delay: 0, expected: 34960, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 35039, expected: 35038
+	Connection: %Simulator.Connection{danger: 34999.0, delay: 0, expected: 35038, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 35117, expected: 35116
+	Connection: %Simulator.Connection{danger: 35077.0, delay: 0, expected: 35116, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 35199, expected: 35194
+	Connection: %Simulator.Connection{danger: 35155.0, delay: 0, expected: 35194, key: 66, n: 78, pid: #PID<0.103.0>}
+Got attack at time 35200
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 35276, expected: 35272
+	Connection: %Simulator.Connection{danger: 35233.0, delay: 0, expected: 35272, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 35355, expected: 35350
+	Connection: %Simulator.Connection{danger: 35311.0, delay: 0, expected: 35350, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 35429, expected: 35428
+	Connection: %Simulator.Connection{danger: 35389.0, delay: 0, expected: 35428, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 35509, expected: 35506
+	Connection: %Simulator.Connection{danger: 35467.0, delay: 0, expected: 35506, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 35589, expected: 35584
+	Connection: %Simulator.Connection{danger: 35545.0, delay: 0, expected: 35584, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 35662, expected: 35662
+	Connection: %Simulator.Connection{danger: 35623.0, delay: 0, expected: 35662, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 35744, expected: 35740
+	Connection: %Simulator.Connection{danger: 35701.0, delay: 0, expected: 35740, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 35824, expected: 35818
+	Connection: %Simulator.Connection{danger: 35779.0, delay: 0, expected: 35818, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 35900, expected: 35896
+	Connection: %Simulator.Connection{danger: 35857.0, delay: 0, expected: 35896, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 35979, expected: 35974
+	Connection: %Simulator.Connection{danger: 35935.0, delay: 0, expected: 35974, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 36054, expected: 36052
+	Connection: %Simulator.Connection{danger: 36013.0, delay: 0, expected: 36052, key: 66, n: 78, pid: #PID<0.102.0>}
+Got attack at time 36093
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 36130, expected: 36130
+	Connection: %Simulator.Connection{danger: 36091.0, delay: 0, expected: 36130, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 36209, expected: 36208
+	Connection: %Simulator.Connection{danger: 36169.0, delay: 0, expected: 36208, key: 66, n: 78, pid: #PID<0.102.0>}
+Message "safe" 
+	Received at PID: #PID<0.102.0>, from PID: #PID<0.103.0>
+	Received at time: 36291, expected: 36286
+	Connection: %Simulator.Connection{danger: 36247.0, delay: 0, expected: 36286, key: 66, n: 78, pid: #PID<0.103.0>}
+Message "safe" 
+	Received at PID: #PID<0.103.0>, from PID: #PID<0.102.0>
+	Received at time: 36369, expected: 36364
+	Connection: %Simulator.Connection{danger: 36325.0, delay: 0, expected: 36364, key: 66, n: 78, pid: #PID<0.102.0>}
