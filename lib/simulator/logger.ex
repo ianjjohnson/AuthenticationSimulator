@@ -59,7 +59,7 @@ defmodule Simulator.Logger do
 
     IO.binwrite state.log, "Got attack at time #{received}\n"
 
-    state = %{state | authenticators: update_authenticators(state)}
+    state = %{state | authenticators: update_authenticators(state, received, expected)}
 
     {:noreply, state}
   end
@@ -85,7 +85,7 @@ defmodule Simulator.Logger do
                    <> "\t False Neg: #{authenticator.falseNeg} \n"
   end
 
-  defp update_authenticators(state) do
+  defp update_authenticators(state, received, expected) do
     state.authenticators
     |> Enum.map(&(update_authenticator(&1, :unsafe, received, expected)))
   end
