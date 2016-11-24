@@ -72,12 +72,10 @@ defmodule Simulator.NetworkNode do
 
     #Respond to the message (asynchronously)
     received = Simulator.Clock.current_time
-    myPid = self
+    myPid = self #creates a copy of 'self' pid instead of a ref
     spawn(fn -> respond_to_client(from, myPid, state) end)
 
-    #Log the message
-    conn = get_conn_by_pid state, from
-    Logger.log content, myPid, from, received, conn
+    Logger.log content, myPid, from, received, get_conn_by_pid(state, from)
 
     {:noreply, state}
   end

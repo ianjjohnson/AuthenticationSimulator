@@ -1,23 +1,14 @@
 # Simulator
 
-**TODO: Add description**
+## To run the simulator:
+```elixir
+iex -S mix
 
-## Installation
+Simulator.run
+```
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+This will automatically generate log and time files as the simulator runs. To write auth.dat files, use:
 
-  1. Add `simulator` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:simulator, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `simulator` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:simulator]]
-    end
-    ```
+```elixir
+Simulator.Logger.write_authenticators
+```
