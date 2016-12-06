@@ -26,9 +26,11 @@ Erlang is a VM-based functional programming language with strong, deep-seeded su
 
 First, the (simplified) architecture of the Elixir/Erlang environment must be known. Erlang runs a VM called Beam. The Beam VM can contain multiple Erlang processes. Erlang processes have very low overhead, so millions of them can run on a single Beam instance at once. However, the Beam VM runs on a single operating system-level process. Therefore, a simple parallelized program running in a single Beam VM is not truly parallel, as all computations are occurring on the same physical CPU core. However, Erlang processes running on Beam are all isolated from one another, and can send eachother messages based on their Beam process IDs (PIDs). Therefore, they can, with reasonable accuracy, be used to simulate truly parallel processes with neglibile message propagation delay.
 
-The data presented in this report was generated using parallel Erlang processes running in a single Beam VM on a single CPU core. However, the simulator itself is configurable to use any number of cores, on any number of machines.
+The data presented in this report was generated using parallel Erlang processes running in a single Beam VM on a single CPU core. However, the simulator itself is configurable to use any number of cores on any number of machines.
 
 \subsection{Simulator Architecture}
+
+
 
 \subsection{Using the Simulator}
 
