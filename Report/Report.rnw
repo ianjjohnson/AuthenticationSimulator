@@ -30,9 +30,29 @@ The data presented in this report was generated using parallel Erlang processes 
 
 \subsection{Simulator Architecture}
 
+Every node on the link-layer network is modelled using an Erlang process with its own unique PID which is used for addressing. All nodes are run using OTP servers, which provide error recovery and a standardized message communication model. There are additional OTP servers running in their own Erlang processes which the network nodes can poll for information. These servers manage a synchronous clock among all of the nodes, as well as an address list of all active nodes on the network. Nodes can join or leave the network as they please, and the OTP server in charge of topology synchronization communicates their presence/absence to the remaining nodes on the network. All nodes on the network maintain connections with all other nodes on the network, with the exception of a few special "attacker" nodes, which are Erlang processes that send messages to active nodes in an attempt to derail their communications, or intrude upon them. 
+
+All network nodes are supervised by an OTP supervisor using a one-for-one supervision strategy. The same is true for the network services servers (time, topology), which are supervised by a separate OTP supervisor.
+
+Because all of the Erlang processes are running on a single Beam instance, none of them can send a message to another at exactly the same time. However, this does introduce a bit of artificial delay into the network. This artificial delay represents the random distribution of time during which the system takes over the CPU core and temporarily halts the Beam instance. This delay is a reasonable approximation of actual processing delay. The data shown in this report is gathered from a Linux machine running on a quad-core Intel I7 processor, with no user tasks running. (The only other tasks running on the processor are system tasks related to the Ubuntu 14.04 distribution).
 
 
 \subsection{Using the Simulator}
+
+Currently, the simulator can only be run from the command line, although a proper deployment is under way. In order to run the simulator, one can clone the source code from \textit{www.github.com/ianjjohnson/AuthenticationSimulator.git}. Note that the Elixir/Erlang runtime and Mix toolkit must be installed to run it. Once the deployment is complete, the Erlang runtime will no longer be a dependancy, as it will be built into the deployment. Once the code has been cloned, navigate into the root directory of the Git repository, and type:
+
+\textit{iex -S mix}
+
+This will open the Interactive Elixir shell. Once in the shell, type:
+
+\textit{Simulator.run}
+
+This will begin running the simulator. While the simulator is running, it will produce output about time delays caused by system CPU use. In order to, at any point, write the current authentication statistics to a file, without interrupting the simulation, type:
+
+\textit{Simulator.Loger.write_authenticators}
+
+This will produce a file called \textit{data/auth.dat}, which is an ASCII-encoded text file containing data about the authentication rates of the protocol using various window sizes. Note that the window sizes are encoded in milliseconds, and by default the maximum induced delay is 1024 milliseconds. This is configurable within the code.
+
 
 
 \begin{thebibliography}{9} 
