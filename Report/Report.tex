@@ -62,7 +62,44 @@ While the authenticator runs, it logs the amount of delay incurred above the art
 
 \begin{center}
 \includegraphics{Report-001}
+
 \textit{Figure 3.1: Timeseries of Extra (Non-Induced) Delay}
+\end{center}
+
+The time series shows that there is no strong signal in the delays. It appears to simply be noise caused by the OS taking over the CPU occasionally. Nonetheless, the distribution of delay is still of interest, and is shown in Figure 3.2.
+
+\begin{center}
+\includegraphics{Report-002}
+
+\textit{Figure 3.2: Histogram of Extra (Non-Induced) Delay}
+\end{center}
+
+A vertical line must be drawn in the Figure 3.2 such that all messages received in an amount of time to the left of the line are authenticated, and all those to the right of the line are treated as invalid. The remainder of the presented data pertains to the process of deciding where that line should be drawn.
+
+\subsection{Authentication Window}
+
+While the simulator runs, it constantly logs the amount of time passed the expected time for both valid messages, and messages from attackers, and keeps track of how frequently a specific authentication window size correctly or incorrectly labels both valid and attacker messages. The simulator writes a confusion matrix for each authenticator size. The confusion matrix identifies the number of true positives and true negatives as well as the number of false positives and false negatives.
+
+Figure 3.3 shows the percentage of safe messages that were labeled as safe, and the percentage of attacker messages which were successfuly marked as unsafe.
+
+\begin{center}
+\includegraphics{Report-003}
+
+\textit{Figure 3.3: Recall and precision scores for various window sizes}
+\end{center}
+
+Figure 3.3 shows that, in general, as window size increases, authentication accuracy increases, and negative authentication accuracy decreases. This is expected, as a greater window size in general causes more messages to be labeled as "safe." Figure 3.4 shows the cost function of the various window sizes, where the cost function is defined as the item-wise cost matrix defined by Table 3.1.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Actual & Predicted & Cost \\ \hline
+Safe & Safe & 0 \\
+Safe & Unsafe & 0.5 \\
+Unsafe & Safe & 1 \\
+Unsafe & Unsafe & 0 \\
+\hline
+\end{tabular}
 \end{center}
 
 \begin{thebibliography}{9} 

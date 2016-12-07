@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  6 DEC 2016 19:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  6 DEC 2016 20:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -370,24 +370,43 @@ File: Report-001.pdf Graphic file (type pdf)
  <use Report-001.pdf>
 Package pdftex.def Info: Report-001.pdf used on input line 64.
 (pdftex.def)             Requested size: 387.36938pt x 387.38945pt.
- [3 <./Report-001.pdf>] (./Report.aux) ) 
+
+<Report-002.pdf, id=14, 433.62pt x 433.62pt>
+File: Report-002.pdf Graphic file (type pdf)
+ <use Report-002.pdf>
+Package pdftex.def Info: Report-002.pdf used on input line 72.
+(pdftex.def)             Requested size: 387.36938pt x 387.38945pt.
+ [3 <./Report-001.pdf>] <Report-003.pdf, id=24, 433.62pt x 433.62pt>
+File: Report-003.pdf Graphic file (type pdf)
+ <use Report-003.pdf>
+Package pdftex.def Info: Report-003.pdf used on input line 86.
+(pdftex.def)             Requested size: 387.36938pt x 387.38945pt.
+
+[4 <./Report-002.pdf>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 94.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 94.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 94.
+ [5 <./Report-003.pdf>] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 4608 strings out of 493089
- 71118 string characters out of 6134842
+ 4635 strings out of 493089
+ 71479 string characters out of 6134842
  136994 words of memory out of 5000000
- 8020 multiletter control sequences out of 15000+600000
- 24469 words of font info for 51 fonts, out of 8000000 for 9000
+ 8039 multiletter control sequences out of 15000+600000
+ 26292 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,4n,42p,1068b,179s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,6n,42p,1068b,181s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti12.pfb>
-Output written on Report.pdf (3 pages, 73622 bytes).
+Output written on Report.pdf (5 pages, 90522 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

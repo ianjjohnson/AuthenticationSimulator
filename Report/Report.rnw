@@ -64,6 +64,7 @@ While the authenticator runs, it logs the amount of delay incurred above the art
 times <- read.csv("../data/time.dat")
 ts.plot(times$X4, xlab="Message Number", ylab="Jitter (MS)", main="Timeseries of CPU Delay")
 @
+
 \textit{Figure 3.1: Timeseries of Extra (Non-Induced) Delay}
 \end{center}
 
@@ -74,6 +75,7 @@ The time series shows that there is no strong signal in the delays. It appears t
 hist(times$X4+0.5,freq = FALSE, breaks=-1:(max(times$X4)+1)+0.5, xlab="Time passed expected (ms)", main = "Histogram of CPU Delay")
 lines(density(times$X4, bw=0.5))
 @
+
 \textit{Figure 3.2: Histogram of Extra (Non-Induced) Delay}
 \end{center}
 
@@ -83,12 +85,46 @@ A vertical line must be drawn in the Figure 3.2 such that all messages received 
 
 While the simulator runs, it constantly logs the amount of time passed the expected time for both valid messages, and messages from attackers, and keeps track of how frequently a specific authentication window size correctly or incorrectly labels both valid and attacker messages. The simulator writes a confusion matrix for each authenticator size. The confusion matrix identifies the number of true positives and true negatives as well as the number of false positives and false negatives.
 
-\begin{thebibliography}{9} 
+Figure 3.3 shows the percentage of safe messages that were labeled as safe, and the percentage of attacker messages which were successfuly marked as unsafe.
 
-\bibitem{example} here is the citation
+\begin{center}
+<<echo=FALSE, fig=TRUE>>=
+auth <- read.csv('../data/formatted_auth.dat')
+colnames(auth) <- c("window", "tp", "fp", "tn", "fn")
+plot(auth$window, auth$tp / (auth$tp + auth$fn), main = "Positive and Negative Authentication Accuracies", ylab="Score", xlab="Window Size")
+points(auth$window, auth$tn / (auth$fp + auth$tn))
+lines(auth$window, auth$tp / (auth$tp + auth$fn), col= "Blue")
+lines(auth$window, auth$tn / (auth$fp + auth$tn), col= "Green")
+legend('bottom', c("Positive Authentication Accuracy", "Negative Authentication Accuracy"), lty = c(1,1), lwd=c(2.5,2.5), col=c("blue", "green"), bty="n")
 
+@
 
-\end{thebibliography} 
+\textit{Figure 3.3: Recall and precision scores for various window sizes}
+\end{center}
+
+Figure 3.3 shows that, in general, as window size increases, authentication accuracy increases, and negative authentication accuracy decreases. This is expected, as a greater window size in general causes more messages to be labeled as "safe." Figure 3.4 shows the cost function of the various window sizes, where the cost function is defined as the item-wise cost matrix defined by Table 3.1.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Actual & Predicted & Cost \\ \hline
+Safe & Safe & 0 \\
+Safe & Unsafe & 0.5 \\
+Unsafe & Safe & 1 \\
+Unsafe & Unsafe & 0 \\
+\hline
+\end{tabular}
+
+<<echo=FALSE, fig=TRUE>>=
+
+plot(auth$window, auth$fp + 0.5*auth$fn, main = "Cost Scores", ylab="Score", xlab="Window Size")
+lines(auth$window, auth$fp + 0.5*auth$fn, col= "Blue")
+@
+
+\textit{Figure 3.4: Cost scores for various window sizes}
+
+\end{center}
+
 
 \end{document}
 
