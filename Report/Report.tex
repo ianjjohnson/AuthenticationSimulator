@@ -40,6 +40,30 @@ Because all of the Erlang processes are running on a single Beam instance, none 
 
 \subsection{Using the Simulator}
 
+Currently, the simulator can only be run from the command line, although a proper deployment is under way. In order to run the simulator, one can clone the source code from \textit{www.github.com/ianjjohnson/AuthenticationSimulator.git}. Note that the Elixir/Erlang runtime and Mix toolkit must be installed to run it. Once the deployment is complete, the Erlang runtime will no longer be a dependancy, as it will be built into the deployment. Once the code has been cloned, navigate into the root directory of the Git repository, and type:
+
+\textit{iex -S mix}
+
+This will open the Interactive Elixir shell. Once in the shell, type:
+
+\textit{Simulator.run}
+
+This will begin running the simulator. While the simulator is running, it will produce output about time delays caused by system CPU use. In order to, at any point, write the current authentication statistics to a file, without interrupting the simulation, type:
+
+\textit{Simulator.Loger.write\textunderscore authenticators}
+
+This will produce a file called \textit{data/auth.dat}, which is an ASCII-encoded text file containing data about the authentication rates of the protocol using various window sizes. Note that the window sizes are encoded in milliseconds, and by default the maximum induced delay is 1024 milliseconds. This is configurable within the code.
+
+\section{Results}
+
+\subsection{Delay}
+
+While the authenticator runs, it logs the amount of delay incurred above the artificial delay for every message that is received on the simulated network. Figure 3.1 shows that delay as a timeseries.
+
+\begin{center}
+\includegraphics{Report-001}
+\textit{Figure 3.1: Timeseries of Extra (Non-Induced) Delay}
+\end{center}
 
 \begin{thebibliography}{9} 
 

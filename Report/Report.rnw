@@ -49,11 +49,39 @@ This will open the Interactive Elixir shell. Once in the shell, type:
 
 This will begin running the simulator. While the simulator is running, it will produce output about time delays caused by system CPU use. In order to, at any point, write the current authentication statistics to a file, without interrupting the simulation, type:
 
-\textit{Simulator.Loger.write_authenticators}
+\textit{Simulator.Loger.write\textunderscore authenticators}
 
 This will produce a file called \textit{data/auth.dat}, which is an ASCII-encoded text file containing data about the authentication rates of the protocol using various window sizes. Note that the window sizes are encoded in milliseconds, and by default the maximum induced delay is 1024 milliseconds. This is configurable within the code.
 
+\section{Results}
 
+\subsection{Delay}
+
+While the authenticator runs, it logs the amount of delay incurred above the artificial delay for every message that is received on the simulated network. Figure 3.1 shows that delay as a timeseries.
+
+\begin{center}
+<<echo=FALSE, fig=TRUE>>=
+times <- read.csv("../data/time.dat")
+ts.plot(times$X4, xlab="Message Number", ylab="Jitter (MS)")
+@
+\textit{Figure 3.1: Timeseries of Extra (Non-Induced) Delay}
+\end{center}
+
+The time series shows that there is no strong signal in the delays. It appears to simply be noise caused by the OS taking over the CPU occasionally. Nonetheless, the distribution of delay is still of interest, and is shown in Figure 3.2.
+
+\begin{center}
+<<echo=FALSE, fig=TRUE>>=
+hist(times$X4+0.5,freq = FALSE, breaks=-1:(max(times$X4)+1)+0.5, xlab="Time passed expected (ms)")
+lines(density(times$X4, bw=0.5))
+@
+\textit{Figure 3.2: Histogram of Extra (Non-Induced) Delay}
+\end{center}
+
+A vertical line must be drawn in the Figure 3.2 such that all messages received in an amount of time to the left of the line are authenticated, and all those to the right of the line are treated as invalid. The remainder of the presented data pertains to the process of deciding where, exactly, that line should be drawn.
+
+\subsection{Authentication Window}
+
+While the simulator runs, it constantly logs the amount of time passed the expected time for both valid messages, and messages from attackers, and keeps track of how frequently a specific authentication window size correctly or incorrectly labels both valid and attacker messages.
 
 \begin{thebibliography}{9} 
 
