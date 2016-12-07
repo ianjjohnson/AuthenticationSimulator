@@ -62,7 +62,8 @@ While the authenticator runs, it logs the amount of delay incurred above the art
 \begin{center}
 <<echo=FALSE, fig=TRUE>>=
 times <- read.csv("../data/time.dat")
-ts.plot(times$X4, xlab="Message Number", ylab="Jitter (MS)", main="Timeseries of CPU Delay")
+colnames(times) <- c("t")
+ts.plot(times$t, xlab="Message Number", ylab="Jitter (MS)", main="Timeseries of CPU Delay")
 @
 
 \textit{Figure 3.1: Timeseries of Extra (Non-Induced) Delay}
@@ -72,8 +73,8 @@ The time series shows that there is no strong signal in the delays. It appears t
 
 \begin{center}
 <<echo=FALSE, fig=TRUE>>=
-hist(times$X4+0.5,freq = FALSE, breaks=-1:(max(times$X4)+1)+0.5, xlab="Time passed expected (ms)", main = "Histogram of CPU Delay")
-lines(density(times$X4, bw=0.5))
+hist(times$t+0.5,freq = FALSE, breaks=-1:(max(times$t)+1)+0.5, xlab="Time passed expected (ms)", main = "Histogram of CPU Delay")
+lines(density(times$t, bw=0.5))
 @
 
 \textit{Figure 3.2: Histogram of Extra (Non-Induced) Delay}
@@ -91,7 +92,7 @@ Figure 3.3 shows the percentage of safe messages that were labeled as safe, and 
 <<echo=FALSE, fig=TRUE>>=
 auth <- read.csv('../data/formatted_auth.dat')
 colnames(auth) <- c("window", "tp", "fp", "tn", "fn")
-plot(auth$window, auth$tp / (auth$tp + auth$fn), main = "Positive and Negative Authentication Accuracies", ylab="Score", xlab="Window Size")
+plot(auth$window, auth$tp / (auth$tp + auth$fn), main = "Positive and Negative Authentication Accuracies", ylab="Score", xlab="Window Size", ylim=c(0,1))
 points(auth$window, auth$tn / (auth$fp + auth$tn))
 lines(auth$window, auth$tp / (auth$tp + auth$fn), col= "Blue")
 lines(auth$window, auth$tn / (auth$fp + auth$tn), col= "Green")
@@ -109,16 +110,16 @@ Figure 3.3 shows that, in general, as window size increases, authentication accu
 \hline
 Actual & Predicted & Cost \\ \hline
 Safe & Safe & 0 \\
-Safe & Unsafe & 0.5 \\
-Unsafe & Safe & 1 \\
+Safe & Unsafe & 1 \\
+Unsafe & Safe & 100 \\
 Unsafe & Unsafe & 0 \\
 \hline
 \end{tabular}
 
 <<echo=FALSE, fig=TRUE>>=
 
-plot(auth$window, auth$fp + 0.5*auth$fn, main = "Cost Scores", ylab="Score", xlab="Window Size")
-lines(auth$window, auth$fp + 0.5*auth$fn, col= "Blue")
+plot(auth$window, 100*auth$fp + 1*auth$fn, main = "Cost Scores", ylab="Score", xlab="Window Size")
+lines(auth$window, 100*auth$fp + auth$fn, col= "Blue")
 @
 
 \textit{Figure 3.4: Cost scores for various window sizes}
